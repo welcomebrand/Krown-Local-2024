@@ -9,6 +9,17 @@
   border-radius: var(--border-radius-cards) var(--border-radius-cards) 0 0;
   transition: opacity 0.3s linear, visibility 0.3s linear !important;
 }
+
+.product-item--sold-out .product-item__image-figure {
+  opacity: .5;
+  filter: grayscale(1);
+}
+
+.product-item--sold-out:hover .product-item__image-figure {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
 .product-item__image .lazy-image:before, .product-item__image .lazy-image:after {
   border-radius: var(--border-radius-cards) 0 0;
 }
