@@ -181,7 +181,7 @@
   <div class="container--large gutter-top--regular gutter-bottom--regular rte">
 
     <span>
-      {{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name | escape }}</a>.
+      {{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name | escape }}</a>. &nbsp;
       {%- if section.settings.show_locale_selector or section.settings.show_country_selector -%}
         <span class="powered-by-shopify">{{ powered_by_link }}</span>
       {%- endif -%}
