@@ -566,6 +566,8 @@
 
             </product-form>
 
+
+
             {%- form 'product', product, id: 'product-form-installment' -%}
               <input type="hidden" name="id" value="{{ current_variant.id }}">
               {{ form | payment_terms }}
