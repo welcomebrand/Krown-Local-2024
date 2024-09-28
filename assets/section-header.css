@@ -1123,3 +1123,16 @@ html[dir=rtl] .announcement-bar__content-nav {
   position: relative;
   z-index: 1;
 }
+
+
+
+
+/*
+
+Cutting Edge Knives - Custom stuff
+
+*/ 
+
+.site-nav.style--classic .submenu::after {
+  background: #f3f3ec;
+}

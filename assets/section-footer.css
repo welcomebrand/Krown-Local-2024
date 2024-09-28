@@ -3,6 +3,7 @@
 */
 .main-footer {
   margin-top: var(--container-vertical-space);
+  margin-top: 0;
   border-top: 1px solid var(--color-borders-footer);
   background: var(--color-background-footer);
   color: var(--color-text-footer);

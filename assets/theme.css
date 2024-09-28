@@ -423,39 +423,39 @@ h6,
 @media screen and (max-width: 1023px) {
   h1,
 .h1 {
-    font-size: calc( 					38px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc( 					32px / 60 * var(--base-headings-size) + 0px 				);
   }
 }
 @media screen and (min-width: 1024px) {
   h1,
 .h1 {
-    font-size: calc( 				58px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc( 				50px / 60 * var(--base-headings-size) + 0px 			);
   }
 }
 
 @media screen and (max-width: 1023px) {
   h2,
 .h2 {
-    font-size: calc( 					32px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc( 					28px / 60 * var(--base-headings-size) + 0px 				);
   }
 }
 @media screen and (min-width: 1024px) {
   h2,
 .h2 {
-    font-size: calc( 				42px / 60 * var(--base-headings-size) + 0px 			);
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  h3,
-.h3 {
-    font-size: calc( 					26px / 60 * var(--base-headings-size) + 0px 				);
-  }
-}
-@media screen and (min-width: 1024px) {
-  h3,
-.h3 {
     font-size: calc( 				32px / 60 * var(--base-headings-size) + 0px 			);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  h3,
+.h3 {
+    font-size: calc( 					22px / 60 * var(--base-headings-size) + 0px 				);
+  }
+}
+@media screen and (min-width: 1024px) {
+  h3,
+.h3 {
+    font-size: calc( 				24px / 60 * var(--base-headings-size) + 0px 			);
   }
 }
 
@@ -2453,3 +2453,117 @@ html[dir=rtl] .card__image svg, .card__image html[dir=rtl] svg, html[dir=rtl] .c
 html[dir=ltr] .card__image svg, .card__image html[dir=ltr] svg, html[dir=ltr] .card__image--background, html[dir=ltr] .card__image--with-overlay:after, html[dir=ltr] .lazy-image:not(.lazy-image--no-transition):before, html[dir=ltr] .lazy-image:not(.lazy-image--no-transition):after, html[dir=ltr] .svg-placeholder.svg-placeholder--background {
   left: 0;
 }
+
+
+
+
+
+
+
+/*
+
+START: Cutting Edge Knives - Custom styles and tweaks
+
+*/ 
+
+/* Sitewide footer reviews carousel  */
+.review-carousel {
+  background: #f3f3ec;
+  border-top: 2px solid #C7C7BC;
+  border-bottom: 2px solid #C7C7BC;
+  }
+
+
+
+/* 
+  Product page - Content from custom fields: 
+  - Collection reviews
+  - Product Quick view
+  - Product details
+  - Protection and care
+  - Meet the maker 
+*/
+
+/* Some specific background styling on the body element just for the product page */
+
+@media screen and (max-width: 767px) {
+.template-product {
+    background: linear-gradient(to bottom, #fff 0%, #f3f3ec 100%); 
+  }
+}
+
+.template-product {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #DFDFCD 100%); 
+    }
+
+.template-product main {
+    background-color: transparent;
+}
+
+.information {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.product-related-categories {
+  background-color: #da6b3f;
+  border-top: 2px solid #d3623c;
+  color: #fff;
+  margin-top: var(--gutter-container);
+  padding: var(--gutter-container) 0;
+}
+
+ .product-related-categories ul {
+    margin-bottom: 0;
+  }
+
+    .product-related-categories li {
+      list-style: none;
+        display: inline-block;
+        margin: 0 var(--gutter-container) 0 0;
+    }
+
+   .product-related-categories li a {
+      color: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: underline dotted #f3f3ec;
+      text-underline-offset: 5px;
+      }
+
+      .product-related-categories li a:hover {
+        text-decoration: underline;
+      }
+    
+  
+/* Klaviyo back in stock trigger  */
+.product-form.disable-buy-button #effectiveAppsBINWrapper {
+  /* We manually hide the buy buttons because the klayvio button is coded into the product-item.liquid template */
+  display: none;
+}
+
+.klaviyo-bis-trigger {
+  flex: initial;
+  align-content: center;
+  height: var(--button-product);
+  padding: 0 1.875rem;
+  font-size: calc(20px / 16 * var(--base-body-size) + 0px);
+  background-color: #da6b3f;
+  color: #fff;
+}
+
+.klaviyo-bis-trigger:hover {
+  background-color: #252324 !important;
+  color: #fff !important;
+}
+
+
+
+
+/*
+
+END: Cutting Edge Knives - Custom styles and tweaks
+
+*/ 
