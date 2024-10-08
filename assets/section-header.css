@@ -103,8 +103,8 @@ html[dir=ltr] .menu-promotion .menu-promotion-background-image img, .menu-promot
 }
 
 .header-container {
-  border-bottom: 1px solid var(--color-borders-header);
-  background: var(--color-background-header);
+  border-bottom: 1px solid var(--color-mid-stone);
+  background: var(--color-stone);
   position: relative;
   font-size: calc(16px / 16 * var(--base-menu-size) + 0px);
   font-weight: var(--font-weight-menu);
@@ -1080,7 +1080,7 @@ html[dir=rtl] .announcement-bar__content-nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--color-background-header);
+  background: var(--color-stone);
   color: var(--color-text-header);
   z-index: 999;
   transform: translateY(-100%);

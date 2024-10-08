@@ -3,7 +3,7 @@
 <div class="container--large container--vertical-space-small">
 
   <div {% unless section.settings.enable_tags %} class="gutter-bottom--page" {% endunless %}>
-    <h1 class="title h2">{{ blog.title | escape }}</h1>
+    <h1 class="title">{{ blog.title | escape }}</h1>
   </div>
 
   {%- if section.settings.enable_tags -%}

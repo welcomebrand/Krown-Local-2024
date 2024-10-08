@@ -28,7 +28,7 @@
 
       <div class="section-heading__text remove-empty-space">
 
-        <h1 class="h2">{{ collection.title | escape }}</h1>
+        <h1 class="underline-style">{{ collection.title | escape }}</h1>
 
         {%- if section.settings.show_collection_description and collection.description != blank -%}
           <div class="collection-header__description rte">{{ collection.description }}</div>

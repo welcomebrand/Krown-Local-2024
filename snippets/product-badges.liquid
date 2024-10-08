@@ -8,6 +8,17 @@
     </span>
   {%- endif -%}
 
+  {% if product.available == true %} 
+        <span class="product-item__badge product-item__badge--sale"
+      style="background-color: {{ settings.product_card_badge_sold_out_color }}; color: {{ settings.product_card_badge_sold_out_text_color }}"
+    >
+          {% if product.first_available_variant.inventory_quantity > 0 %}
+          <i class="grid-product-count" style="display:none;">{{ product.first_available_variant.inventory_quantity }}
+          {% endif %}</i>
+          <strong><span style="color:var(--color-orange)">In stock</span> &ndash; Ready to dispatch</strong>
+        </span>
+      {% endif %}
+
   {%- if product.compare_at_price > product.price -%} 
   
     {%- liquid 

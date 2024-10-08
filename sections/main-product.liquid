@@ -1,5 +1,14 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
+{% comment %}
+Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3bb4ea0c49d
+
+
+<script type="text/javascript">
+  function handleSelectionChange(){var e=document.querySelector(".pm-tooltip");window.getSelection().toString().length>0?e.classList.add("pm-tooltip-active"):e.classList.remove("pm-tooltip-active")}function handleMouseOrTouchEnd(e){var t=document.querySelector(".pm-tooltip");e.target.closest(".pm-tooltip-content")||e.target.closest(".pm-tooltip")||t.classList.remove("pm-tooltip-active")}function handleSelectionChange(){var e=document.querySelector(".pm-tooltip");window.getSelection().toString().length>0?e.classList.add("pm-tooltip-active"):e.classList.remove("pm-tooltip-active")}function handleMouseOrTouchEnd(e){var t=document.querySelector(".pm-tooltip");e.target.closest(".pm-tooltip-content")||e.target.closest(".pm-tooltip")||t.classList.remove("pm-tooltip-active")}document.addEventListener("selectionchange",handleSelectionChange),document.addEventListener("mouseup",handleMouseOrTouchEnd),document.addEventListener("touchend",handleMouseOrTouchEnd),document.querySelector(".pm-close-btn").addEventListener("click",function(){document.querySelector(".pm-tooltip").classList.remove("pm-tooltip-active")}),document.addEventListener("selectionchange",handleSelectionChange),document.addEventListener("mouseup",handleMouseOrTouchEnd),document.addEventListener("touchend",handleMouseOrTouchEnd),document.querySelector(".pm-close-btn").addEventListener("click",function(){document.querySelector(".pm-tooltip").classList.remove("pm-tooltip-active")});
+</script>
+{% endcomment %}
+
 {%- liquid
   unless product.has_only_default_variant
     assign default_to_first_variant = section.settings.default_to_first_variant
@@ -130,7 +139,7 @@
     
   {{ 'component-toggle.css' | asset_url | stylesheet_tag }}
 
-	<div class="product-text remove-empty-space">
+	<div class="product-text remove-empty-space {% assign current_variant = product.selected_or_first_available_variant %}{% if current_variant.inventory_quantity >= 1 %} in-stock {% else %} out-of-stock {% endif %}">
 
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
@@ -347,7 +356,18 @@
           </span>
 
         {%- when 'title' -%}
-          <h1 class="product__title h2" {{ block.shopify_attributes }}>{{ product.title | escape }}</h1>
+          <h1 class="product__title pm-tooltip" {{ block.shopify_attributes }}>
+            {{ product.title | escape }}
+            {% comment %}
+            <div class="pm-tooltip-content">
+              <p class="pm-tooltip-heading">Shopping around?</p>
+              <p class="pm-tooltip-message">We work hard to bring you the best possible prices so if you've seen this cheaper elsewhere, get in touch and give us a chance to <a href="/pages/our-price-match-promise" target="_blank">price match it</a> it for you!</p>
+              <span class="pm-close-btn">&times;</span>
+            </div>
+            {% endcomment %}
+          </h1>
+
+
 
         {%- when 'price' -%}
 
@@ -360,6 +380,29 @@
               endif
             -%}
           </div>
+
+
+
+
+        {% assign current_variant = product.selected_or_first_available_variant %}  
+        
+          {% if current_variant.inventory_quantity >= 2 %}
+          <p class="container-product-lead-inventory">{% if current_variant.available %}<strong class="container-product-lead-inventory-in-stock">In stock</strong> &ndash; <a style="margin-left: 0;" class="container-product-lead-inventory-link" href="https://cuttingedgeknives.co.uk/pages/postage-and-returns" target="_blank" title="Free UK (Orders over £100) and Worldwide (Orders over £275) shipping">Ready for dispatch</a> <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>    
+          {% endif %}
+
+          {% comment %} If there's only 1 left {% endcomment %}
+          {% elsif current_variant.inventory_quantity == 1 %}
+          <p class="container-product-lead-inventory"><strong>Only 1 left</strong> &ndash; Act fast! <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>
+
+          {% comment %} Otherwise show as out of stock {% endcomment %}
+          {% else %}
+          <p class="container-product-lead-inventory"><strong>Currently out of stock</strong> <a class="container-product-lead-inventory-link" href="https://cuttingedgeknives.co.uk/pages/stock-updates" target="_blank" title="Learn more about the supply of Japanese knives">(When is it back?)</a> <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>
+
+        {% endif %}
+        
+
+
+
 
         {%- when 'tax_info' -%}
 
@@ -379,7 +422,7 @@
           <div class="product__sku-barcode text-size--small" {{ block.shopify_attributes }}>
             <span class="product__sku" data-js-product-sku>
               {%- if current_variant.sku != blank -%}
-                {{ 'products.page.sku' | t }}{{ current_variant.sku | escape }}
+                <strong>{{ 'products.page.sku' | t }}</strong>{{ current_variant.sku | escape }}
               {%- endif -%}
             </span>
              <span class="product__barcode" data-js-product-barcode>

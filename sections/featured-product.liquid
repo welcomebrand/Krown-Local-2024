@@ -334,7 +334,7 @@
           </span>
 
         {%- when 'title' -%}
-          <{{ block.settings.seo_h_tag }} class="product__title h2" {{ block.shopify_attributes }}>
+          <{{ block.settings.seo_h_tag }} class="product__title" {{ block.shopify_attributes }}>
             {%- liquid
               unless product == blank 
                 echo product.title | escape

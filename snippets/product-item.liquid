@@ -62,17 +62,6 @@
 
 
 
-    {% if product.available == true %}
-      <div class="grid-product__tag grid-product__tag--in-stock" style="color:pink">
-        <strong class="in-stock-tag">
-          {% if product.first_available_variant.inventory_quantity > 0 %}
-          <i class="grid-product-count" style="display:none;">{{ product.first_available_variant.inventory_quantity }}
-          {% endif %}</i>
-          <span>In stock</span> &ndash; Ready to dispatch</strong>
-      </div>
-      {% endif %}
-
-
 
 
   <div class="card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}">

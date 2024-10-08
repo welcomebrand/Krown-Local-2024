@@ -15,6 +15,7 @@
   filter: grayscale(1);
 }
 
+#the-archive .product-item--sold-out .product-item__image-figure,
 .product-item--sold-out:hover .product-item__image-figure {
   opacity: 1;
   filter: grayscale(0);
@@ -148,7 +149,7 @@ html[dir=ltr] .product-item__badges {
   border-radius: clamp(0px, var(--border-radius-buttons), 3px);
   background-color: #bbb;
   line-height: 1.5rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .product-text .product-item__badge {
   margin-bottom: 0;

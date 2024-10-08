@@ -2,7 +2,7 @@
 {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 
 <div class="container--large container--vertical-space">
-  <h1 class="title h2 gutter-bottom--page">{{ 'cart.title' | t }}</h1>
+  <h1 class="title underline-style gutter-bottom--page">{{ 'cart.title' | t }}</h1>
   <div class="cart-section {% if cart.items.size == 0 %} cart-section--empty {% endif %}">
     <main>
 

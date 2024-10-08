@@ -301,8 +301,9 @@ html[dir=ltr] .product-variants--radio .product-variant__item input {
 }
 .product-variants--radio .product-variant__item input:checked + label {
   font-weight: var(--font-weight-body-bold);
-  border-color: var(--color-text-main) !important;
-  box-shadow: 0 0 0px 1px var(--color-text-main);
+  border-color: var(--color-orange) !important;
+  box-shadow: 0 0 0px 2px var(--color-orange);
+  background-color: var(--color-stone);
 }
 .no-touchevents .product-variants--radio .product-variant__item input:hover + label {
   border-color: var(--color-borders-forms-secondary);
@@ -337,9 +338,9 @@ html[dir=ltr] .product-variants--radio .product-variant__item input {
 }
 
 .product-form {
-  border-top: 1px solid var(--color-borders-main);
+  /*border-top: 1px solid var(--color-borders-main);*/
   display: block;
-  margin-top: 0.5rem;
+  /*margin-top: 0.5rem;*/
   margin-bottom: 1.25rem;
   width: 100%;
   overflow: visible;
@@ -387,12 +388,28 @@ html[dir=ltr] .product-variants--radio .product-variant__item input {
   text-align: center;
 }
 
+
 .add-to-cart {
   flex-grow: 10;
+  background-color: var(--color-green);
+  border: 2px solid var(--color-dark-green);
 }
+
+.add-to-cart:hover {
+  background-color: var(--color-dark-green) !important;
+  border: 2px solid var(--color-dark-green) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .add-to-cart {
+    font-size: calc(24px / 16 * var(--base-body-size) + 0px);
+  }
+}
+
 .add-to-cart.disabled {
   pointer-events: none;
   opacity: 0.36;
+  display: none;
 }
 .add-to-cart.disabled + .shopify-payment-button {
   pointer-events: none;
@@ -991,3 +1008,339 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
 .sticky-add-to-cart .button--solid .button__preloader circle {
   stroke: var(--color-background-main) !important;
 }
+
+
+
+
+
+/* START: CEK Custom Styles */
+.information {
+    border-top: 3px double #dfdfcd;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+.product-video-container {
+    padding: var(--gutter-small);
+    position: relative;
+    border: 1px solid var(--color-stone);
+    background: #fff;
+    border-radius: var(--border-radius-cards);
+}
+
+
+.information.information--technical {
+  border-top: 0;
+}
+
+.technical-specs {
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid var(--color-mid-stone);
+    border-top: 3px double var(--color-mid-stone);
+}
+
+.technical-specs li {
+    list-style: none;
+    border-top: 1px solid var(--color-mid-stone);
+    padding: .5em 0;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.technical-specs li:hover {
+  background-color: var(--color-stone);
+}
+
+.technical-specs li.steel-care-list:hover,
+.technical-specs li.care:hover {
+    background: none;
+}
+
+.technical-specs .blade-thickness {
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs li {
+        padding-left: 0;
+        display: flex;
+        align-content: flex-start;
+    }
+}
+
+.technical-specs strong {
+    padding-right: .5rem;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs strong {
+        flex: 1 0 30%;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs span {
+        flex: 1 0 70%;
+    }
+}
+
+.technical-specs .blade-thickness-wrap-secondary span {
+    flex: 1 0 100%;
+}
+
+.technical-specs .blade-thickness-wrap-secondary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs .blade-thickness-wrap-secondary {
+        margin-left: 30%;
+    }
+}
+
+
+.technical-specs li .small {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.technical-specs i {
+  margin-left: 1em;
+  font-style: italic;
+  font-size: calc(12px / 16 * var(--base-body-size) + 0px);
+  color: var(--color-secondary-text-main);
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs li .small {
+        display: inline-block;
+        margin-left: 1em;
+    }
+}
+
+.technical-specs.technical-specs--footer {
+    border: 1px solid #dfdfcd;
+    border-radius: .1875rem;
+    background: #fff;
+}
+
+.technical-specs--footer {
+    margin-bottom: 0;
+}
+
+
+.technical-specs--footer .alert {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs--footer .alert {
+        align-items: center;
+        padding: 1.5rem;
+    }
+}
+
+.technical-specs .alert {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs .alert {
+        margin: 0;
+        border-bottom: 0;
+    }
+}
+
+.alert {
+    background-color: #ff4f33;
+    border: 1px solid #cc1c00;
+    padding: 1rem;
+    margin: 0;
+}
+
+.alert.non-urgent {
+    background-color: #fcffb6;
+    border: 1px solid #f8ff50;
+}
+
+.technical-specs .alert.clear {
+    background: transparent;
+    border: 0;
+}
+
+.technical-specs--footer .care-span {
+    padding-right: 1.5rem;
+    margin-right: 0;
+    max-width: 65%;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs--footer .care-span {
+        max-width: 70%;
+    }
+}
+
+.technical-specs li.care {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.technical-specs .alert svg {
+    margin-right: .75rem;
+    width: 100%;
+    max-width: 24px;
+    overflow: initial;
+}
+
+.technical-specs .care-span {
+    font-weight: 400;
+    margin-right: .75rem;
+    padding-right: 0;
+    font-size: .8125rem;
+    line-height: 1rem;
+    width: auto;
+}
+
+.technical-specs .care-span b {
+  font-weight: var(--font-weight-headings);
+  border-bottom: 2px dotted var(--color-orange);
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs .care-span {
+        padding-right: 1.5rem;
+    }
+}
+
+.technical-specs--footer .care-kit-info {
+    max-width: 35%;
+}
+
+.technical-specs .care-kit-info {
+    border: 1px solid #dfdfcd;
+    border-radius: .1875rem;
+    padding: .3rem;
+    background: #fff;
+    margin-left: auto;
+    text-align: center;
+}
+
+.technical-specs .care-kit-info a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+.technical-specs .alert a {
+    flex: 1;
+}
+
+.technical-specs .care-kit-info img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.technical-specs .care-kit-info span {
+    width: auto;
+    font-size: 11px;
+    line-height: 1.25;
+}
+
+
+.technical-specs .care-kit-info b {
+    display: block;
+}
+
+@media only screen and (min-width: 48em) {
+    .technical-specs span {
+        flex: 1 0 70%;
+    }
+}
+
+
+
+
+
+.protection-content {
+    overflow: auto;
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.protection-lede {
+    max-width: 50%;
+    float: left;
+    display: inline;
+    padding-right: 1.5rem;
+    margin-right: -3rem;
+}
+
+@media only screen and (min-width: 40em) {
+    .protection-lede {
+        max-width: 35%;
+    }
+}
+
+.protection-lede img {
+  max-width: 200px;
+}
+
+
+
+
+
+.product-blacksmith-wrap .lede {
+    color: #777;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+
+
+/* Hide the Klarna and Clearpay if out of stock  */
+.out-of-stock #shopify-block-klarna_on_site_messaging_app_block_9ec8yR,
+.out-of-stock #shopify-block-clearpay_on_site_messaging_payments_messaging_BdNNpL {
+  display: none;
+}
+
+
+.container-product-lead-inventory {
+    font-style: italic;
+    font-size: calc(14px / 16 * var(--base-body-size) + 0px);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.container-product-lead-inventory strong {
+    color: #ff4f33;
+    font-weight: var(--font-weight-headings);
+}
+
+.container-product-lead-inventory .container-product-lead-inventory-in-stock {
+    color: #567d06;
+}
+
+.container-product-lead-inventory .container-product-lead-inventory-link {
+    font-style: italic;
+    margin-left: .75rem;
+    font-weight: var(--font-weight-body-bold);
+}
+
+.container-product-lead-inventory .container-product-lead-inventory-count {
+    display: none;
+}
+
+
+/* END: CEK Custom Styles  */
