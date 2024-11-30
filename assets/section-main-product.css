@@ -204,6 +204,12 @@ html[dir=ltr] .product-gallery__thumbnails .thumbnail__badge {
 .product-text > * {
   display: block;
 }
+
+.product__description.rte p:first-child {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
 .product-text > *:not(:last-child) {
   margin-bottom: 1.25rem;
 }
@@ -636,12 +642,23 @@ html[dir=ltr] .product-gallery-item__zoom {
 .lazyloaded ~ .product-gallery-item__zoom {
   opacity: 1;
 }
-.product-gallery-item__zoom svg path, .product-gallery-item__zoom svg rect {
+.product-gallery-item__zoom svg path, 
+.product-gallery-item__zoom svg rect {
   fill: var(--color-text-main);
 }
 .product-gallery-item__zoom svg circle {
   stroke: var(--color-text-main);
 }
+
+.product-gallery-item__zoom svg,
+.product-gallery-item__zoom svg path,
+.product-gallery-item__zoom svg circle,
+.product-gallery-item__zoom svg rect {
+  fill: white;
+  stroke: white;
+}
+
+
 .no-touchevents .product-gallery-item__zoom:hover svg {
   transform: scale(1.05);
 }
@@ -1180,7 +1197,7 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
 .technical-specs--footer .care-span {
     padding-right: 1.5rem;
     margin-right: 0;
-    max-width: 65%;
+    max-width: 60%;
 }
 
 @media only screen and (min-width: 48em) {
@@ -1314,6 +1331,11 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
 .out-of-stock #shopify-block-clearpay_on_site_messaging_payments_messaging_BdNNpL {
   display: none;
 }
+
+/* Hide the Candyrack upsell if product out of stock  */
+.out-of-stock .candyrack-ppp-checkbox-layout {
+  display: none;
+ }
 
 
 .container-product-lead-inventory {

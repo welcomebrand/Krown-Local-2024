@@ -488,13 +488,13 @@ h1.product__title {
 @media screen and (max-width: 1023px) {
   h5,
 .h5 {
-    font-size: calc( 					16px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc( 					24px / 60 * var(--base-headings-size) + 0px 				);
   }
 }
 @media screen and (min-width: 1024px) {
   h5,
 .h5 {
-    font-size: calc( 				18px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc( 				22px / 60 * var(--base-headings-size) + 0px 			);
   }
 }
 
@@ -2573,9 +2573,17 @@ START: Cutting Edge Knives - Custom styles and tweaks
 
     .product-related-categories li {
       list-style: none;
-        display: inline-block;
-        margin: 0 var(--gutter-container) 0 0;
+      display: inline-block;
+      margin: 0 var(--gutter-container) 0 0;
     }
+
+@media screen and (max-width: 767px) {
+   .product-related-categories li {
+      display: block;
+      margin: 0 0 var(--gutter-container) 0;
+    }
+}
+
 
    .product-related-categories li a {
       color: #fff;
@@ -2759,7 +2767,13 @@ START: Cutting Edge Knives - Custom styles and tweaks
   height: 1.5rem; }
 */
 
+.locale-selectors__container {
+  padding-bottom: 100px !important;
+}
 
+.locale-selectors__content {
+  justify-content: flex-start !important;
+}
 
 /*
 

@@ -156,7 +156,7 @@ html[dir=ltr] .sidebar--left {
   box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
   bottom: 0;
   width: 100%;
-  padding: var(--sidebar-gutter);
+  padding: var(--sidebar-gutter) var(--sidebar-gutter) 100px var(--sidebar-gutter);
   background: var(--color-background-main);
   border-top: 1px solid var(--color-borders-main);
   z-index: 9;
@@ -388,4 +388,14 @@ cart-recommendations .product-price--unit {
   font-size: 90%;
   display: block;
   opacity: 0.76;
+}
+
+
+/* CEK custom styles */
+.cart__details p a {
+  text-decoration: underline;
+}
+
+.cart__details p a:hover {
+  text-decoration: none;
 }

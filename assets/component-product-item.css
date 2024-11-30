@@ -16,6 +16,7 @@
 }
 
 #the-archive .product-item--sold-out .product-item__image-figure,
+.product-item--sold-out.product-item--Archived .product-item__image-figure,
 .product-item--sold-out:hover .product-item__image-figure {
   opacity: 1;
   filter: grayscale(0);

@@ -9,11 +9,21 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
 <head>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR9X6R90MR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YR9X6R90MR');
+  </script>
+
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0">
-
-	{%- if settings.favicon -%}
+  <meta name="google-site-verification" content="3Cf2MtIJgIpb6SvvUOkG6C6COlaqqSWUCZf6DG4ORSA" />
+	
+  {%- if settings.favicon -%}
 		<link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}" type="image/png" />
 	{%- endif -%}
 
@@ -360,7 +370,6 @@
 
 
 
-<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
 <script>
     var klaviyo = klaviyo || [];
     klaviyo.init({
@@ -413,19 +422,19 @@
 // var clearpay_hide_lower_limit = true;
 // var clearpay_show_if_outside_limits = true;
 
-// var clearpay_product_integration_enabled = true;
+var clearpay_product_integration_enabled = false;
 // var clearpay_product_selector = '#product-price-selector';
 // var clearpay_variable_price_fallback = false;
 // var clearpay_variable_price_fallback_selector = '';
 // var clearpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
 
-// var clearpay_cart_integration_enabled = true;
+var clearpay_cart_integration_enabled = false;
 // var clearpay_cart_static_selector = '#cart-subtotal-selector';
 // var clearpay_variable_subtotal_fallback = false;
 // var clearpay_variable_subtotal_fallback_selector = '';
 // var clearpay_variable_subtotal_fallback_method = 'mutation'; // Can be 'mutation' or 'interval'.
 
-// var clearpay_dynamic_cart_integration_enabled = false;
+var clearpay_dynamic_cart_integration_enabled = false;
 // var clearpay_dynamic_cart_selector = '.cart-drawer__footer .totals';
 // var clearpay_dynamic_cart_observer_target = '#CartDrawer';
 
@@ -457,6 +466,8 @@ var clearpay_js_snippet_version = '1.2.1';
 <!-- Clearpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
 {% endif %}
 <!-- End Shopify-Clearpay JavaScript Snippet (v1.2.1) -->
+
+
 
 </body>
 </html>

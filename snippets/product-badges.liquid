@@ -1,6 +1,8 @@
 <div class="product-item__badges {{ text_class }}">
 
-  {%- if product.available == false -%}
+
+
+  {%- if product.available == false and product.type != 'Archived' -%}
     <span class="product-item__badge product-item__badge--sold"
       style="background-color: {{ settings.product_card_badge_sold_out_color }}; color: {{ settings.product_card_badge_sold_out_text_color }}"
     >
@@ -8,16 +10,24 @@
     </span>
   {%- endif -%}
 
-  {% if product.available == true %} 
-        <span class="product-item__badge product-item__badge--sale"
+{%- if product.type == 'Archived' -%}
+    <span class="product-item__badge product-item__badge--sold" title="This product is unlikely to be restocked" 
       style="background-color: {{ settings.product_card_badge_sold_out_color }}; color: {{ settings.product_card_badge_sold_out_text_color }}"
     >
-          {% if product.first_available_variant.inventory_quantity > 0 %}
-          <i class="grid-product-count" style="display:none;">{{ product.first_available_variant.inventory_quantity }}
-          {% endif %}</i>
-          <strong><span style="color:var(--color-orange)">In stock</span> &ndash; Ready to dispatch</strong>
-        </span>
-      {% endif %}
+      🗝 Archived
+    </span>
+  {%- endif -%}
+
+  {% if product.available == true %} 
+    <span class="product-item__badge product-item__badge--sale"
+  style="background-color: {{ settings.product_card_badge_sold_out_color }}; color: {{ settings.product_card_badge_sold_out_text_color }}"
+>
+      {% if product.first_available_variant.inventory_quantity > 0 %}
+      <i class="grid-product-count" style="display:none;">{{ product.first_available_variant.inventory_quantity }}
+      {% endif %}</i>
+      <strong><span style="color:var(--color-orange)">In stock</span> &ndash; Ready to dispatch</strong>
+    </span>
+  {% endif %}
 
   {%- if product.compare_at_price > product.price -%} 
   
@@ -93,5 +103,8 @@
       {{ settings.product_card_badge_custom_3_text }}
     </span>
   {%- endif -%}
+
+    
+
 
 </div>
