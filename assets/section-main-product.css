@@ -1051,6 +1051,10 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
   border-top: 0;
 }
 
+.information--technical-title span {
+  color: #777;
+}
+
 .technical-specs {
     margin: 0 0 1.5rem;
     border-bottom: 1px solid var(--color-mid-stone);
