@@ -11,7 +11,7 @@
 }
 
 .product-item--sold-out .product-item__image-figure {
-  opacity: .5;
+  opacity: .65;
   filter: grayscale(1);
 }
 
@@ -152,6 +152,12 @@ html[dir=ltr] .product-item__badges {
   line-height: 1.5rem;
   /*text-transform: uppercase;*/
 }
+
+.product-item__badge.product-item__badge--sold {
+  font-style: italic;
+  color: var(--color-secondary-text-cards) !important;
+}
+
 .product-text .product-item__badge {
   margin-bottom: 0;
   max-width: none;
