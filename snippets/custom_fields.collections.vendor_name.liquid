@@ -1,0 +1,5 @@
+<ul>
+{% for item in collection.metafields["custom_fields"]["vendor_name"].value %}
+<li><a href="{{ item.url }}" class="metafield-collection_reference">{{ item.title }}</a></li>
+{% endfor %}
+</ul>

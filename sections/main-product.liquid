@@ -387,7 +387,7 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
         {% assign current_variant = product.selected_or_first_available_variant %}  
         
           {% if current_variant.inventory_quantity >= 2 %}
-          <p class="container-product-lead-inventory">{% if current_variant.available %}<strong class="container-product-lead-inventory-in-stock">In stock</strong> &ndash; <a style="margin-left: 0;" class="container-product-lead-inventory-link" href="https://cuttingedgeknives.co.uk/pages/postage-and-returns" target="_blank" title="Free UK (Orders over £100) and Worldwide (Orders over £275) shipping">Ready for dispatch</a> <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>    
+          <p class="container-product-lead-inventory">{% if current_variant.available %}<strong class="container-product-lead-inventory-in-stock">In stock</strong> &ndash; <a style="margin-left: 0;" class="container-product-lead-inventory-link" href="https://cuttingedgeknives.co.uk/pages/postage-and-returns" target="_blank" title="Free UK and Worldwide shipping available">Ready for dispatch</a> <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>    
           {% endif %}
 
           {% comment %} If there's only 1 left {% endcomment %}

@@ -42,9 +42,16 @@
                 {{ 'collections.use_fewer_filters_html' | t: link: results_url, class: 'button--text' }}
               </p>
           {%- else %}
-            <p class="no-content-message">
+            <p class="no-content-message" style="font-size:20px;margin-bottom:0;">
               {{ 'products.grid.no_products_text' | t }}
             </p>
+            <p>➡️ <strong>Browse:</strong> <a href="https://cuttingedgeknives.co.uk/collections/all-japanese-knives-accessories?filter.v.price.gte=&filter.v.price.lte=&sort_by=price-ascending" title="View all products">All Products</a>
+              &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="https://cuttingedgeknives.co.uk/collections/all-knives" title="View all Japanese Knives">All Knives</a>
+              &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="https://cuttingedgeknives.co.uk/collections/accessories" title="View all Accessories">All Accessories</a>
+            </p>
+            
           {%- endif -%}
         {%- endfor -%}
 

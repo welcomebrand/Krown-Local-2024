@@ -1,5 +1,5 @@
 {
-  "new_color_swatches": "Loại trình chọn biến thể \"khối\" hỗ trợ các mẫu màu được tạo bằng các trường siêu dữ liệu danh mục. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/manual\/custom-data\/metafields\/category-metafields\/using-category-metafields).",
+  "new_color_swatches": "Loại trình chọn biến thể \"khối\" hỗ trợ các mẫu màu được tạo bằng các trường siêu dữ liệu danh mục. [Tìm hiểu thêm](https://help.shopify.com/en/manual/custom-data/metafields/category-metafields/using-category-metafields).",
   "video_controls": "Hiển thị điều khiển video",
   "sticky_cart_actions": "Bật hành động giỏ hàng cố định",
   "currency_codes": {
@@ -103,7 +103,7 @@
       "countdown_timer": {
         "name": "Đồng hồ đếm ngược",
         "label": "Nguồn linh động",
-        "info": "Đặt nguồn thời gian linh động cho đồng hồ đếm ngược. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/642-product-pages#countdown-timer)"
+        "info": "Đặt nguồn thời gian linh động cho đồng hồ đếm ngược. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/642-product-pages#countdown-timer)"
       },
       "progress_slider": {
         "name": "Biểu đồ tiến trình dạng thanh",
@@ -111,7 +111,7 @@
         "height": "Chiều cao thanh trượt",
         "width": "Chiều rộng thanh trượt",
         "dynamic_content": {
-          "info": "Sử dụng các nguồn linh động để xác định các giá trị không trùng lặp bằng cách tạo trường thông tin bổ sung cho sản phẩm đối với biểu đồ tiến trình. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/804-product-page#Progress-chart-S8c6R)",
+          "info": "Sử dụng các nguồn linh động để xác định các giá trị không trùng lặp bằng cách tạo trường thông tin bổ sung cho sản phẩm đối với biểu đồ tiến trình. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/804-product-page#Progress-chart-S8c6R)",
           "slider_label": "Trường thông tin bổ sung của giá trị",
           "dots_label": "Trường thông tin bổ sung dạng chấm được đánh dấu"
         }
@@ -144,7 +144,7 @@
         "label_right": "Nhãn cột bên phải",
         "information": {
           "label": "Thông tin",
-          "info": "Tách biệt nhãn và giá trị bằng dấu phẩy. Sử dụng ngắt dòng để thêm hàng mới. Sử dụng dấu gạch nối để thụt đầu hàng. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/804-product-page#Nutritional-information-ypnLL)"
+          "info": "Tách biệt nhãn và giá trị bằng dấu phẩy. Sử dụng ngắt dòng để thêm hàng mới. Sử dụng dấu gạch nối để thụt đầu hàng. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/804-product-page#Nutritional-information-ypnLL)"
         },
         "extra_information": "Thông tin bổ sung"
       }
@@ -229,7 +229,7 @@
         },
         "enhance_featured_products": {
           "label": "Nhấn mạnh sản phẩm nổi bật",
-          "info": "[Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/832-product-card)"
+          "info": "[Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/832-product-card)"
         },
         "show_discount": {
           "label": "Hiển thị giảm giá dưới dạng...",
@@ -259,7 +259,7 @@
         },
         "header__1": {
           "content": "Xếp hạng sản phẩm",
-          "info": "Để hiển thị điểm xếp hạng, hãy thêm ứng dụng xếp hạng sản phẩm. [Tìm hiểu thêm](https:\/\/apps.shopify.com\/search?q=product%20reviews)"
+          "info": "Để hiển thị điểm xếp hạng, hãy thêm ứng dụng xếp hạng sản phẩm. [Tìm hiểu thêm](https://apps.shopify.com/search?q=product%20reviews)"
         },
         "header__2": {
           "content": "Đánh giá sản phẩm"
@@ -339,7 +339,7 @@
     },
     "follow_on_shop": {
       "content": "Theo dõi trên Shop",
-      "info": "Để cho phép khách hàng theo dõi cửa hàng của bạn trên ứng dụng Shop từ website cửa hàng, bạn phải bật Shop Pay. [Tìm hiểu thêm](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/follow-on-shop)",
+      "info": "Để cho phép khách hàng theo dõi cửa hàng của bạn trên ứng dụng Shop từ website cửa hàng, bạn phải bật Shop Pay. [Tìm hiểu thêm](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)",
       "label": "Bật tính năng Theo dõi trên Shop"
     }
   },
@@ -431,7 +431,7 @@
             "info": "Tính năng này chỉ hoạt động khi có một loại tiền tệ và phương thức vận chuyển. Nếu bạn đang sử dụng nhiều phương thức vận chuyển hoặc đơn vị tiền tệ thì tính năng này có thể hiển thị cho khách hàng giá trị không đúng.",
             "show": {
               "label": "Hiển thị số tiền tối thiểu để được vận chuyển miễn phí",
-              "info": "Để định cấu hình phí vận chuyển, hãy vào mục [cài đặt vận chuyển](\/admin\/settings\/shipping)."
+              "info": "Để định cấu hình phí vận chuyển, hãy vào mục [cài đặt vận chuyển](/admin/settings/shipping)."
             },
             "amount": {
               "label": "Số tiền tối thiểu để được miễn phí vận chuyển",
@@ -462,7 +462,7 @@
           },
           "local-pickup": {
             "name": "Tình trạng còn hàng tại địa phương",
-            "info": "Chủ đề này hiển thị tình trạng còn hàng của sản phẩm tại địa phương. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/805-collection-page)"
+            "info": "Chủ đề này hiển thị tình trạng còn hàng của sản phẩm tại địa phương. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/805-collection-page)"
           },
           "products-list": {
             "name": "Danh sách sản phẩm"
@@ -481,7 +481,7 @@
             },
             "custom_badges": {
               "name": "Huy hiệu sản phẩm tùy chỉnh",
-              "info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/795-product-card#Product-badges-_KIdK)",
+              "info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/795-product-card#Product-badges-_KIdK)",
               "name__1": "Huy hiệu tùy chỉnh 1",
               "name__2": "Huy hiệu tùy chỉnh 2",
               "name__3": "Huy hiệu tùy chỉnh 3",
@@ -535,7 +535,7 @@
               "info": "256 x 256px"
             },
             "select_icon": {
-              "info": "Để trực quan hóa &amp; tải xuống nhiều biểu tượng hơn, xin vui lòng truy cập [liên kết này](https:\/\/resources.krownthemes.com\/icons\/)"
+              "info": "Để trực quan hóa &amp; tải xuống nhiều biểu tượng hơn, xin vui lòng truy cập [liên kết này](https://resources.krownthemes.com/icons/)"
             },
             "icon_color": {
               "label": "Biểu tượng",
@@ -544,7 +544,7 @@
           }
         },
         "content-toggles": {
-          "name": "Mục ẩn\/hiện nội dung",
+          "name": "Mục ẩn/hiện nội dung",
           "block": "Nội dung"
         },
         "text-columns-with-images": {
@@ -657,7 +657,7 @@
               "settings": {
                 "name": {
                   "label": "Tên",
-                  "info": "Tên cửa hàng cần trùng khớp với tên cửa hàng của bạn được xác định trong mục [cài đặt vị trí](\/admin\/settings\/locations)"
+                  "info": "Tên cửa hàng cần trùng khớp với tên cửa hàng của bạn được xác định trong mục [cài đặt vị trí](/admin/settings/locations)"
                 },
                 "pickup_price": {
                   "label": "Giá lấy hàng"
@@ -681,7 +681,7 @@
                 },
                 "map": {
                   "name": "Ghim trên bản đồ",
-                  "info": "Nếu kích hoạt bản đồ, bạn cần xác định ghim tùy chỉnh cho địa chỉ này. [Tìm hiểu cách lấy tọa độ địa chỉ của bạn](https:\/\/support.google.com\/maps\/answer\/18539?hl=en)"
+                  "info": "Nếu kích hoạt bản đồ, bạn cần xác định ghim tùy chỉnh cho địa chỉ này. [Tìm hiểu cách lấy tọa độ địa chỉ của bạn](https://support.google.com/maps/answer/18539?hl=en)"
                 },
                 "map_latitude": {
                   "label": "Vĩ độ",
@@ -742,15 +742,15 @@
             },
             "store-selector": {
               "name": "Bộ chọn cửa hàng",
-              "content": "Có thể vào mục Bộ chọn Cửa hàng để định cấu hình bộ chọn cửa hàng. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/799-store-selector)",
-              "info": "Chủ đề này cho phép bạn kết nối các vị trí cửa hàng thực của mình với bộ chọn cửa hàng tương tác. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/799-store-selector)"
+              "content": "Có thể vào mục Bộ chọn Cửa hàng để định cấu hình bộ chọn cửa hàng. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/799-store-selector)",
+              "info": "Chủ đề này cho phép bạn kết nối các vị trí cửa hàng thực của mình với bộ chọn cửa hàng tương tác. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/799-store-selector)"
             },
             "mega-menu": {
               "name": "Menu lớn",
               "settings": {
                 "menu_handle": {
                   "label": "Tên handle của menu",
-                  "info": "Chủ đề này sử dụng các menu lớn. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/798-header-section#mega-menus)"
+                  "info": "Chủ đề này sử dụng các menu lớn. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/798-header-section#mega-menus)"
                 }
               }
             }
@@ -948,8 +948,8 @@
             },
             "icons": {
               "name": "Danh sách biểu tượng",
-              "info": "Để trực quan hóa &amp; tải xuống các biểu tượng có trong chủ đề này, xin vui lòng truy cập [liên kết này](https:\/\/resources.krownthemes.com\/icons\/\/).",
-              "help": "Chủ đề này cho phép bạn thêm các biểu tượng sản phẩm tùy chỉnh thông qua nội dung động. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/639-theme-settings#dynamic-icons)",
+              "info": "Để trực quan hóa &amp; tải xuống các biểu tượng có trong chủ đề này, xin vui lòng truy cập [liên kết này](https://resources.krownthemes.com/icons//).",
+              "help": "Chủ đề này cho phép bạn thêm các biểu tượng sản phẩm tùy chỉnh thông qua nội dung động. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/639-theme-settings#dynamic-icons)",
               "headers": {
                 "icon_1": "Biểu tượng 1",
                 "icon_2": "Biểu tượng 2",
@@ -981,7 +981,7 @@
         },
         "main-article-comments": {
           "name": "Bình luận bài viết",
-          "info": "Để bật bình luận, hãy vào mục [cài đặt blog] của bạn.(\/admin\/blogs)"
+          "info": "Để bật bình luận, hãy vào mục [cài đặt blog] của bạn.(/admin/blogs)"
         },
         "main-article-navigation": {
           "name": "Điều hướng bài viết",
@@ -1007,7 +1007,7 @@
           "blocks": {
             "payment": {
               "name": "Biểu tượng thanh toán",
-              "info": "Các biểu tượng hiển thị được xác định theo mục [cài đặt thanh toán](\/admin\/settings\/payments) trong cửa hàng của bạn cũng như khu vực và đơn vị tiền tệ của khách hàng."
+              "info": "Các biểu tượng hiển thị được xác định theo mục [cài đặt thanh toán](/admin/settings/payments) trong cửa hàng của bạn cũng như khu vực và đơn vị tiền tệ của khách hàng."
             },
             "text": {
               "name": "Văn bản &amp; biểu tượng mạng xã hội"
@@ -1090,7 +1090,7 @@
             "vendor": "Người bán",
             "text": {
               "name": "Văn bản động",
-              "info": "Sử dụng nguồn động để làm nổi bật một thuộc tính duy nhất bằng cách tạo trường thông tin bổ sung sản phẩm. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/805-collection-page)",
+              "info": "Sử dụng nguồn động để làm nổi bật một thuộc tính duy nhất bằng cách tạo trường thông tin bổ sung sản phẩm. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/805-collection-page)",
               "settings": {
                 "text": {
                   "label": "Trường thông tin bổ sung nhãn"
@@ -1112,7 +1112,7 @@
               }
             },
             "icons": {
-              "info": "Sử dụng các nguồn động để làm nổi bật các thuộc tính duy nhất bằng cách tạo trường thông tin bổ sung sản phẩm cho danh sách biểu tượng. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/639-theme-settings#dynamic-icons)",
+              "info": "Sử dụng các nguồn động để làm nổi bật các thuộc tính duy nhất bằng cách tạo trường thông tin bổ sung sản phẩm cho danh sách biểu tượng. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/639-theme-settings#dynamic-icons)",
               "settings": {
                 "icon": "Trường thông tin bổ sung biểu tượng",
                 "label": "Trường thông tin bổ sung nhãn"
@@ -1135,7 +1135,7 @@
       "name": "Sản phẩm bổ sung",
       "settings": {
         "paragraph": {
-          "content": "Để chọn các sản phẩm bổ sung, hãy thêm ứng dụng Tìm kiếm &amp; Khám phá. [Tìm hiểu thêm](https:\/\/help.shopify.com\/manual\/online-store\/search-and-discovery\/product-recommendations)"
+          "content": "Để chọn các sản phẩm bổ sung, hãy thêm ứng dụng Tìm kiếm &amp; Khám phá. [Tìm hiểu thêm](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
         }
       }
     },
@@ -1151,7 +1151,7 @@
       "seo_late": {
         "breadcrumbs": {
           "label": "Cải thiện mục điều hướng breadcrumb sản phẩm",
-          "info": "Thêm tên bộ sưu tập vào mục điều hướng breadcrumb bằng cách sao chép url của sản phẩm. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/697-seo#breadcrumbs)"
+          "info": "Thêm tên bộ sưu tập vào mục điều hướng breadcrumb bằng cách sao chép url của sản phẩm. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/697-seo#breadcrumbs)"
         }
       },
       "seo": {
@@ -1160,7 +1160,7 @@
         "info": "Chỉ định cấp độ tiêu đề để giúp các công cụ tìm kiếm lập chỉ mục cấu trúc trang của bạn.",
         "microdata": {
           "label": "Tắt lược đồ vi dữ liệu",
-          "info": "Thao tác này sẽ xóa đánh dấu schema.org khỏi trang. Chỉ tắt nếu bạn đang sử dụng ứng dụng của bên thứ ba cho SEO! [https:\/\/shopify-support.krownthemes.com\/article\/697-seo#microdata)"
+          "info": "Thao tác này sẽ xóa đánh dấu schema.org khỏi trang. Chỉ tắt nếu bạn đang sử dụng ứng dụng của bên thứ ba cho SEO! [https://shopify-support.krownthemes.com/article/697-seo#microdata)"
         }
       },
       "late_edits": {
@@ -1194,7 +1194,7 @@
         "optional": "Không bắt buộc"
       },
       "text": {
-        "icons_info": "Để trực quan hóa &amp; tải xuống nhiều biểu tượng hơn, xin vui lòng truy cập [liên kết này](https:\/\/resources.krownthemes.com\/icons\/)"
+        "icons_info": "Để trực quan hóa &amp; tải xuống nhiều biểu tượng hơn, xin vui lòng truy cập [liên kết này](https://resources.krownthemes.com/icons/)"
       },
       "borders": {
         "show_border": "Hiển thị đường viền",
@@ -1322,18 +1322,18 @@
       "cart_upsell": {
         "name": "Đề xuất sản phẩm cá nhân",
         "product": "Sản phẩm",
-        "info": "Các đề xuất linh động dựa trên mặt hàng trong giỏ hàng của bạn. Chúng thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+        "info": "Các đề xuất linh động dựa trên mặt hàng trong giỏ hàng của bạn. Chúng thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https://help.shopify.com/en/themes/development/recommended-products)"
       },
       "gift_wrapping": {
         "name": "Gói quà",
-        "info": "Cần thiết lập việc gói quà như một sản phẩm. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/696-cart-features#gift-wrap)",
+        "info": "Cần thiết lập việc gói quà như một sản phẩm. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/696-cart-features#gift-wrap)",
         "settings": {
           "label": "Văn bản",
           "button": "Nhãn nút"
         }
       },
       "custom_code": {
-        "name": "Liquid \/ HTML Tùy chính"
+        "name": "Liquid / HTML Tùy chính"
       },
       "rating": {
         "name": "Đánh giá ứng dụng",
@@ -1403,7 +1403,7 @@
             "amount_saved": "Số tiền tiết kiệm được"
           },
           "regular_badges": {
-            "info": "Tìm hiểu thêm về huy hiệu sản phẩm [tại đây](https:\/\/shopify-support.krownthemes.com\/article\/377-collection-pages#product-badges)."
+            "info": "Tìm hiểu thêm về huy hiệu sản phẩm [tại đây](https://shopify-support.krownthemes.com/article/377-collection-pages#product-badges)."
           },
           "sold_out": {
             "name": "Huy hiệu đã bán hết",
@@ -1412,8 +1412,8 @@
           },
           "custom_badges": {
             "name": "Huy hiệu sản phẩm tùy chỉnh",
-            "info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/564-product-pages#product-badges)",
-            "split_info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https:\/\/shopify-support.krowntheme.com\/article\/377-collection-pages#product-badges)",
+            "info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/564-product-pages#product-badges)",
+            "split_info": "Chủ đề này sử dụng huy hiệu sản phẩm tùy chỉnh mà bạn có thể xác định tại đây. [Tìm hiểu thêm](https://shopify-support.krowntheme.com/article/377-collection-pages#product-badges)",
             "name__1": "Huy hiệu tùy chỉnh 1",
             "name__2": "Huy hiệu tùy chỉnh 2",
             "name__3": "Huy hiệu tùy chỉnh 3",
@@ -1601,7 +1601,7 @@
             },
             "color_swatches": {
               "label": "Hiển thị các mẫu màu (chỉ dành cho kiểu khối)",
-              "info": "Chủ đề này có thể hiển thị ảnh tùy chỉnh đối với các mẫu màu. [Tìm hiểu thêm](https:\/\/shopify-support.krownthemes.com\/article\/554-using-color-swatches)"
+              "info": "Chủ đề này có thể hiển thị ảnh tùy chỉnh đối với các mẫu màu. [Tìm hiểu thêm](https://shopify-support.krownthemes.com/article/554-using-color-swatches)"
             }
           }
         },
@@ -1623,7 +1623,7 @@
             "map": {
               "api": {
                 "label": "Khóa API Google Maps",
-                "info": "Bạn cần đăng ký [Khóa API Google Maps](http:\/\/shopify-support.krownthemes.com\/article\/385-generate-an-api-key-for-google-maps) để hiển thị bản đồ."
+                "info": "Bạn cần đăng ký [Khóa API Google Maps](http://shopify-support.krownthemes.com/article/385-generate-an-api-key-for-google-maps) để hiển thị bản đồ."
               }
             }
           }
@@ -1751,7 +1751,7 @@
         },
         "icons": {
           "label": "Biểu tượng",
-          "info": "Để nhìn trực quan tất cả các biểu tượng có trong chủ đề này, vui lòng truy cập [liên kết này](https:\/\/krownthemes.com\/krown-icons\/)"
+          "info": "Để nhìn trực quan tất cả các biểu tượng có trong chủ đề này, vui lòng truy cập [liên kết này](https://krownthemes.com/krown-icons/)"
         }
       },
       "blocks": {
@@ -1779,17 +1779,17 @@
         },
         "language_selector": {
           "content": "Công cụ chọn ngôn ngữ",
-          "info": "Để thêm ngôn ngữ, hãy truy cập [phần cài đặt ngôn ngữ] của bạn.(\/admin\/settings\/languages)"
+          "info": "Để thêm ngôn ngữ, hãy truy cập [phần cài đặt ngôn ngữ] của bạn.(/admin/settings/languages)"
         },
         "language_selector_show": {
           "label": "Hiển thị công cụ chọn ngôn ngữ"
         },
         "country_selector": {
-          "content": "Công cụ chọn quốc gia\/khu vực",
-          "info": "Để thêm quốc gia\/khu vực, hãy truy cập [phần cài đặt thanh toán] của bạn.(\/admin\/settings\/payments)"
+          "content": "Công cụ chọn quốc gia/khu vực",
+          "info": "Để thêm quốc gia/khu vực, hãy truy cập [phần cài đặt thanh toán] của bạn.(/admin/settings/payments)"
         },
         "country_selector_show": {
-          "label": "Hiển thị công cụ chọn quốc gia\/khu vực"
+          "label": "Hiển thị công cụ chọn quốc gia/khu vực"
         }
       },
       "blocks": {
@@ -2495,7 +2495,7 @@
           "label": "Bật tính năng lọc theo thẻ"
         },
         "post_limit": {
-          "label": "Số lượng bài viết\/trang"
+          "label": "Số lượng bài viết/trang"
         }
       }
     },
@@ -2615,7 +2615,7 @@
         },
         "header__1": {
           "content": "Đề xuất sản phẩm",
-          "info": "Tính năng đề xuất linh động sử dụng thông tin về đơn hàng và sản phẩm để thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Tính năng đề xuất linh động sử dụng thông tin về đơn hàng và sản phẩm để thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https://help.shopify.com/en/themes/development/recommended-products)"
         }
       }
     },
@@ -2643,7 +2643,7 @@
           "label": "Tiêu đề"
         },
         "open_first": {
-          "label": "Mở nút bật\/tắt đầu tiên theo mặc định"
+          "label": "Mở nút bật/tắt đầu tiên theo mặc định"
         }
       },
       "blocks": {
@@ -2710,7 +2710,7 @@
       "name": "Kết quả tìm kiếm",
       "settings": {
         "products_per_page": {
-          "label": "Kết quả\/trang"
+          "label": "Kết quả/trang"
         }
       }
     },
@@ -2718,11 +2718,11 @@
       "name": "Ô lưới sản phẩm",
       "settings": {
         "products_per_page": {
-          "label": "Sản phẩm\/trang"
+          "label": "Sản phẩm/trang"
         },
         "enable_filtering": {
           "label": "Bật tính năng lọc",
-          "info": "[Bộ lọc tùy chỉnh](\/admin\/menus)"
+          "info": "[Bộ lọc tùy chỉnh](/admin/menus)"
         },
         "enable_sorting": {
           "label": "Bật tính năng sắp xếp"
@@ -2739,7 +2739,7 @@
       "name": "Biểu ngữ bộ sưu tập",
       "settings": {
         "paragraph": {
-          "content": "Để thay đổi mô tả bộ sưu tập hoặc ảnh bộ sưu tập, hãy [chỉnh sửa bộ sưu tập của bạn.](\/admin\/collections)"
+          "content": "Để thay đổi mô tả bộ sưu tập hoặc ảnh bộ sưu tập, hãy [chỉnh sửa bộ sưu tập của bạn.](/admin/collections)"
         },
         "show_collection_description": {
           "label": "Hiển thị mô tả bộ sưu tập"
@@ -2783,7 +2783,7 @@
           "name": "Hiển thị thông tin thuế"
         },
         "sku_barcode": {
-          "name": "SKU \/ mã vạch"
+          "name": "SKU / mã vạch"
         },
         "quantity_selector": {
           "name": "Công cụ chọn số lượng"
@@ -2799,7 +2799,7 @@
             },
             "low_inventory_notification": {
               "label": "Thông báo hàng tồn kho",
-              "info": "Các kiểu mẫu mã cần phải bật tính năng theo dõi hàng tồn kho để tính năng này hoạt động. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/manual\/products\/inventory\/track_inventory)",
+              "info": "Các kiểu mẫu mã cần phải bật tính năng theo dõi hàng tồn kho để tính năng này hoạt động. [Tìm hiểu thêm](https://help.shopify.com/en/manual/products/inventory/track_inventory)",
               "options__1": {
                 "label": "Không hiển thị thông tin hàng tồn kho"
               },
@@ -2817,7 +2817,7 @@
           "settings": {
             "show_dynamic_checkout": {
               "label": "Hiển thị nút thanh toán linh động",
-              "info": "Khi sử dụng các phương thức thanh toán có sẵn trên cửa hàng của bạn, khách hàng sẽ thấy tùy chọn ưu tiên của họ, chẳng hạn như PayPal hoặc Apple Pay. [Tìm hiểu thêm]((https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+              "info": "Khi sử dụng các phương thức thanh toán có sẵn trên cửa hàng của bạn, khách hàng sẽ thấy tùy chọn ưu tiên của họ, chẳng hạn như PayPal hoặc Apple Pay. [Tìm hiểu thêm]((https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
             },
             "show_gift_card_recipient": {
               "label": "Hiển thị biểu mẫu thông tin người nhận đối với các sản phẩm thẻ quà tặng",
@@ -2856,10 +2856,10 @@
           "name": "Chia sẻ",
           "settings": {
             "featured_image_info": {
-              "content": "Nếu bạn đính kèm liên kết trong các bài viết trên mạng xã hội, trang này sẽ hiển thị ảnh nổi bật dưới dạng ảnh xem trước. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/manual\/online-store\/images\/showing-social-media-thumbnail-images)."
+              "content": "Nếu bạn đính kèm liên kết trong các bài viết trên mạng xã hội, trang này sẽ hiển thị ảnh nổi bật dưới dạng ảnh xem trước. [Tìm hiểu thêm](https://help.shopify.com/en/manual/online-store/images/showing-social-media-thumbnail-images)."
             },
             "title_info": {
-              "content": "Tiêu đề và mô tả cửa hàng được đính kèm trong ảnh xem trước. [Tìm hiểu thêm](https:\/\/help.shopify.com\/en\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)."
+              "content": "Tiêu đề và mô tả cửa hàng được đính kèm trong ảnh xem trước. [Tìm hiểu thêm](https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
             }
           }
         },
@@ -2885,7 +2885,7 @@
       "settings": {
         "header": {
           "content": "Media",
-          "info": "Tìm hiểu thêm về [loại tập tin đa phương tiện](https:\/\/help.shopify.com\/manual\/products\/product-media)"
+          "info": "Tìm hiểu thêm về [loại tập tin đa phương tiện](https://help.shopify.com/manual/products/product-media)"
         },
         "enable_sticky_info": {
           "label": "Kích hoạt thông tin sản phẩm cố định trên màn hình lớn"

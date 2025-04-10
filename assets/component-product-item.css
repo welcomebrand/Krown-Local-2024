@@ -219,3 +219,17 @@ html[dir=ltr] .product-item__badges {
 .product-item .yotpo .standalone-bottomline.star-clickable, .product-item .yotpo .standalone-bottomline .star-clickable {
   cursor: default !important;
 }
+
+
+.product-item__title .text-animation--underline {
+  font-family: var(--font-stack-body);
+  text-transform: none;
+  /*background-size: 100% 2px !important;
+  background-image: linear-gradient(to right,#bbb,#bbb);*/
+}
+
+
+/* .product-item__title:hover .text-animation--underline {
+  background-image: linear-gradient(to right,var(--color-text-main),var(--color-text-main));
+} */
+

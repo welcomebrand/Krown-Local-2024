@@ -1,6 +1,6 @@
 {{ 'component-blog-item.css' | asset_url | stylesheet_tag }}
 
-<div class="container--large container--vertical-space-small">
+<div class="container  container--large  container--vertical-space-small main-page gutter-bottom--page">
 
   <div {% unless section.settings.enable_tags %} class="gutter-bottom--page" {% endunless %}>
     <h1 class="title">{{ blog.title | escape }}</h1>

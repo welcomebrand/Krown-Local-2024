@@ -1,0 +1,9 @@
+{% if product.metafields["custom_fields"]["customer_review_body"] != blank %}
+  <div class="custom-field custom-field__customer-review-body custom-field__type--multi-line-text-field">
+    <h3 class="custom-field--title">Customer Review Body</h3>
+    <div class="custom-field--value">
+      {{ product.metafields["custom_fields"]["customer_review_body"] }}
+
+    </div>
+  </div>
+{% endif %}

@@ -21,6 +21,8 @@
     
     <del class="product-price--compare" data-js-product-price-compare></del>
 
+    <span class="p-match-p" style="display:none;font-size:11px;font-style:italic;margin-left:.5rem;">Seen it cheaper elsewhere? <a href="https://cuttingedgeknives.co.uk/pages/our-price-match-promise" title="Find out about our price match promise" target="_blank">Give us a chance to match it</a></span>
+
   {%- else -%}
 
     <span class="product-price--original {{ text_size_class }}" data-js-product-price-original>{{ target.price | money | append: iso_code }}</span>
@@ -37,6 +39,8 @@
       -%}
     </del>
 
+    <span class="p-match-p" style="display:none;font-size:11px;font-style:italic;margin-left:.5rem;">Seen it cheaper elsewhere? <a href="https://cuttingedgeknives.co.uk/pages/our-price-match-promise" title="Find out about our price match promise" target="_blank">Give us a chance to match it</a></span>
+    
   {%- endif -%}
 
   <span class="product-price--unit text-size--regular" data-js-product-price-unit>

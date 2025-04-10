@@ -75,7 +75,7 @@
             {{ block.shopify_attributes }}
           >
             <div class="remove-line-height-space--small">
-              <span class="text-animation--underline text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold text-animation--underline">
+              <h3 class="text-animation--underline text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold text-animation--underline">
                 {%- liquid 
                   unless blank_product 
                     echo product.title 
@@ -83,7 +83,7 @@
                     echo 'general.onboarding.product_title' | t
                   endunless
                 -%}
-              </span>
+              </h3>
             </div>
           </a>
 
