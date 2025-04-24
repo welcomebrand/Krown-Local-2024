@@ -259,23 +259,23 @@ summary::-webkit-details-marker {
 
 @media screen and (max-width: 1023px) {
   .text-with-icon--tooltip .text-with-icon__label, .text-size--xsmall {
-    font-size: calc( 					11px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          11px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .text-with-icon--tooltip .text-with-icon__label, .text-size--xsmall {
-    font-size: calc( 				12px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        12px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   .text-size--small {
-    font-size: calc( 					12px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          12px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .text-size--small {
-    font-size: calc( 				14px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        14px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -283,59 +283,59 @@ summary::-webkit-details-marker {
   input,
 textarea,
 select, .text-size--regular {
-    font-size: calc( 				14px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        14px / 16 * var(--base-body-size) + 0px       );
   }
 }
 @media screen and (min-width: 475px) and (max-width: 1023px) {
   input,
 textarea,
 select, .text-size--regular {
-    font-size: calc( 					15px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          15px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   input,
 textarea,
 select, .text-size--regular {
-    font-size: calc( 				16px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        16px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   .shopify-challenge__container .shopify-challenge__message, .text-size--large {
-    font-size: calc( 					16px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          16px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .shopify-challenge__container .shopify-challenge__message, .text-size--large {
-    font-size: calc( 				18px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        18px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 474px) {
   .text-size--xlarge {
-    font-size: calc( 				16px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        16px / 16 * var(--base-body-size) + 0px       );
   }
 }
 @media screen and (min-width: 475px) and (max-width: 1023px) {
   .text-size--xlarge {
-    font-size: calc( 					20px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          20px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .text-size--xlarge {
-    font-size: calc( 				24px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        24px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   .text-size--heading {
-    font-size: calc( 					38px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          38px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .text-size--heading {
-    font-size: calc( 				42px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        42px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
@@ -344,17 +344,17 @@ select, .text-size--regular {
 }
 @media screen and (max-width: 474px) {
   .button--small {
-    font-size: calc( 				14px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        14px / 16 * var(--base-body-size) + 0px       );
   }
 }
 @media screen and (min-width: 475px) and (max-width: 1023px) {
   .button--small {
-    font-size: calc( 					15px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          15px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .button--small {
-    font-size: calc( 				16px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        16px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -363,12 +363,12 @@ select, .text-size--regular {
 }
 @media screen and (max-width: 1023px) {
   .button--regular {
-    font-size: calc( 					16px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          16px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .button--regular {
-    font-size: calc( 				18px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        18px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -377,12 +377,12 @@ select, .text-size--regular {
 }
 @media screen and (max-width: 1023px) {
   .button--large {
-    font-size: calc( 					18px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          18px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .button--large {
-    font-size: calc( 				20px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        20px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -425,13 +425,13 @@ h6,
 @media screen and (max-width: 1023px) {
   h1,
 .h1 {
-    font-size: calc( 32px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc( 32px / 60 * var(--base-headings-size) + 0px        );
   }
 }
 @media screen and (min-width: 1024px) {
   h1,
 .h1 {
-    font-size: calc( 70px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc( 70px / 60 * var(--base-headings-size) + 0px      );
   }
 }
 
@@ -449,65 +449,65 @@ h1.product__title {
 @media screen and (max-width: 1023px) {
   h2,
 .h2 {
-    font-size: calc( 					28px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          28px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   h2,
 .h2 {
-    font-size: calc( 				32px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        32px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   h3,
 .h3 {
-    font-size: calc( 					22px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          22px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   h3,
 .h3 {
-    font-size: calc( 				24px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        24px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   h4,
 .h4 {
-    font-size: calc( 					20px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          20px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   h4,
 .h4 {
-    font-size: calc( 				24px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        24px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   h5,
 .h5 {
-    font-size: calc( 					24px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          24px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   h5,
 .h5 {
-    font-size: calc( 				22px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        22px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
 @media screen and (max-width: 1023px) {
   h6,
 .h6 {
-    font-size: calc( 					15px / 60 * var(--base-headings-size) + 0px 				);
+    font-size: calc(          15px / 60 * var(--base-headings-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   h6,
 .h6 {
-    font-size: calc( 				16px / 60 * var(--base-headings-size) + 0px 			);
+    font-size: calc(        16px / 60 * var(--base-headings-size) + 0px       );
   }
 }
 
@@ -544,17 +544,17 @@ body {
 }
 @media screen and (max-width: 474px) {
   body {
-    font-size: calc( 				14px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        14px / 16 * var(--base-body-size) + 0px       );
   }
 }
 @media screen and (min-width: 475px) and (max-width: 1023px) {
   body {
-    font-size: calc( 					15px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          15px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   body {
-    font-size: calc( 				16px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        16px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -984,12 +984,12 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
 .container--has-background {
   padding-top: var(--container-vertical-space);
   padding-bottom: var(--container-vertical-space);
-  /*	&:after {
-  		content: "";
-  		background-color: var(--color-background-section);
-  		z-index: -1;
-  		@extend %absolute-fill;
-  	}*/
+  /*  &:after {
+      content: "";
+      background-color: var(--color-background-section);
+      z-index: -1;
+      @extend %absolute-fill;
+    }*/
 }
 @media screen and (max-width: 767px) {
   .container--has-background {
@@ -1174,8 +1174,8 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
 .grid {
   --col-gap: var(--grid-gap);
   --col-size: calc(
-  	(100% - var(--col-gap) * (var(--visible-cols) - 1)) /
-  		var(--visible-cols)
+    (100% - var(--col-gap) * (var(--visible-cols) - 1)) /
+      var(--visible-cols)
   );
   display: grid;
   grid-gap: var(--col-gap);
@@ -1405,8 +1405,8 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
   .portable--grid--slider {
     --col-gap: var(--grid-gap);
     --col-size: calc(
-    	(100% - var(--col-gap) * (var(--visible-cols) - 1)) /
-    		var(--visible-cols)
+      (100% - var(--col-gap) * (var(--visible-cols) - 1)) /
+        var(--visible-cols)
     ) !important;
     grid-auto-flow: column !important;
     grid-template-columns: var(--col-size) !important;
@@ -1618,9 +1618,9 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
   color: var(--color-text-main);
   box-shadow: var(--shadow-x-buttons) var(--shadow-y-buttons) var(--shadow-blur-buttons) var(--color-shadow-buttons);
   /*@include at-query($max, $palm) {
-  	.card__text & {
-  		width: 100%;
-  	}
+    .card__text & {
+      width: 100%;
+    }
   }*/
 }
 .button--regular-mobile {
@@ -2773,6 +2773,13 @@ START: Cutting Edge Knives - Custom styles and tweaks
 
 .locale-selectors__content {
   justify-content: flex-start !important;
+}
+
+
+
+:root .globo-form-app {
+    width: 100% !important;
+    max-width: none !important;
 }
 
 /*
