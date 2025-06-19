@@ -135,6 +135,16 @@
   {% unless settings.show_sidebars_scrollbar %} sidebars-has-scrollbars {% endunless %}
 ">
 
+<!-- AgeChecked for Ecommerce -->
+<script>
+var script = document.createElement('script');
+script.src =
+"https://agechecked.verifico.io/tr/?domain="+window.location.hostname;
+script.async = true;
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+<!-- End AgeChecked for Ecommerce -->
+
   <script type="text/javascript">
     if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) { document.querySelector('body').classList.remove('no-touchevents'); document.querySelector('body').classList.add('touchevents'); } 
   </script>
