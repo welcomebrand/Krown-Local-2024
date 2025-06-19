@@ -1,13 +1,6 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3bb4ea0c49d
 
-
-<script type="text/javascript">
-  function handleSelectionChange(){var e=document.querySelector(".pm-tooltip");window.getSelection().toString().length>0?e.classList.add("pm-tooltip-active"):e.classList.remove("pm-tooltip-active")}function handleMouseOrTouchEnd(e){var t=document.querySelector(".pm-tooltip");e.target.closest(".pm-tooltip-content")||e.target.closest(".pm-tooltip")||t.classList.remove("pm-tooltip-active")}function handleSelectionChange(){var e=document.querySelector(".pm-tooltip");window.getSelection().toString().length>0?e.classList.add("pm-tooltip-active"):e.classList.remove("pm-tooltip-active")}function handleMouseOrTouchEnd(e){var t=document.querySelector(".pm-tooltip");e.target.closest(".pm-tooltip-content")||e.target.closest(".pm-tooltip")||t.classList.remove("pm-tooltip-active")}document.addEventListener("selectionchange",handleSelectionChange),document.addEventListener("mouseup",handleMouseOrTouchEnd),document.addEventListener("touchend",handleMouseOrTouchEnd),document.querySelector(".pm-close-btn").addEventListener("click",function(){document.querySelector(".pm-tooltip").classList.remove("pm-tooltip-active")}),document.addEventListener("selectionchange",handleSelectionChange),document.addEventListener("mouseup",handleMouseOrTouchEnd),document.addEventListener("touchend",handleMouseOrTouchEnd),document.querySelector(".pm-close-btn").addEventListener("click",function(){document.querySelector(".pm-tooltip").classList.remove("pm-tooltip-active")});
-</script>
-{% endcomment %}
 
 {%- liquid
   unless product.has_only_default_variant
@@ -139,7 +132,7 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
     
   {{ 'component-toggle.css' | asset_url | stylesheet_tag }}
 
-	<div class="product-text remove-empty-space {% assign current_variant = product.selected_or_first_available_variant %}{% if current_variant.inventory_quantity >= 1 %} in-stock {% else %} out-of-stock {% endif %}">
+  <div class="product-text remove-empty-space {% assign current_variant = product.selected_or_first_available_variant %}{% if current_variant.inventory_quantity >= 1 %} in-stock {% else %} out-of-stock {% endif %}">
 
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
@@ -355,17 +348,22 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
             {{ block.settings.text }}
           </span>
 
+  
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-YR9X6R90MR');
+</script>
+
+
+
         {%- when 'title' -%}
-          <h1 class="product__title pm-tooltip" {{ block.shopify_attributes }}>
+          <h1 id="popup" class="product__title pm-tooltip" {{ block.shopify_attributes }}>
             {{ product.title | escape }}
-            {% comment %}
-            <div class="pm-tooltip-content">
-              <p class="pm-tooltip-heading">Shopping around?</p>
-              <p class="pm-tooltip-message">We work hard to bring you the best possible prices so if you've seen this cheaper elsewhere, get in touch and give us a chance to <a href="/pages/our-price-match-promise" target="_blank">price match it</a> it for you!</p>
-              <span class="pm-close-btn">&times;</span>
-            </div>
-            {% endcomment %}
+
           </h1>
+
 
 
 
@@ -392,7 +390,7 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
 
           {% comment %} If there's only 1 left {% endcomment %}
           {% elsif current_variant.inventory_quantity == 1 %}
-          <p class="container-product-lead-inventory"><strong>Only 1 left</strong> &ndash; Act fast! <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>
+          <p class="container-product-lead-inventory"><strong class="container-product-lead-inventory-in-stock">Last one in stock</strong> &ndash; Act fast! <span class="container-product-lead-inventory-count">({{ current_variant.inventory_quantity }})</span></p>
 
           {% comment %} Otherwise show as out of stock {% endcomment %}
           {% else %}
@@ -851,13 +849,125 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
 
     {%- endfor -%}
 
- 	</div>
+  </div>
 
   {%- if first_3d_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
     </script>
   {%- endif -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+  price match popup - https://codepen.io/welcomebrand/pen/QwbZbjJ
+  {% endcomment %}
+
+
+
+  <style>
+    #popupBox {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border: 3px solid var(--color-orange);
+    border-radius: 10px;
+      padding: 15px;
+      display: none;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      min-width: 200px;
+      max-width: 60ch;
+      text-align: center;
+    }
+
+    #popupBox button {
+      margin-top: 10px;
+    }
+  </style>
+
+  <div id="popupBox">
+    <h2>Shopping around?</h2>
+    <p>We do our best to bring you the best possible prices matched with our world class service and dispatch speed so if you've seen this cheaper elsewhere, get in touch and give us a chance to match it. We'd love the opportunity to call you a customer.</p>
+    <a class="button button--solid button--regular button--loader" href="/pages/our-price-match-promise" target="_blank">Our Price Match Promise</a>
+  <button class="button button--regular button--loader" onclick="closePopup()">Close</button></div>
+
+  <script>
+    const target = document.getElementById('popup');
+    const popupBox = document.getElementById('popupBox');
+    let popupShown = false;
+
+    function closePopup() {
+      popupBox.style.display = 'none';
+      popupShown = false;
+    }
+
+    function logPopupTrigger() {
+      console.log('GA4 Event: popup_triggered');
+
+      gtag('event', 'popup_triggered', {
+        event_category: 'Engagement',
+        event_label: 'Text Highlight',
+        value: 1,
+        page_location: window.location.href
+      });
+    }
+
+    document.addEventListener('selectionchange', () => {
+      const selection = window.getSelection();
+      if (!selection.rangeCount) return;
+
+      const range = selection.getRangeAt(0);
+      const selectedText = selection.toString().trim();
+
+      if (selectedText && target.contains(range.commonAncestorContainer)) {
+        if (!popupShown) {
+          popupBox.style.display = 'block';
+          popupShown = true;
+          logPopupTrigger();
+        }
+      } else {
+        popupBox.style.display = 'none';
+        popupShown = false;
+      }
+    });
+  </script>
+  
+  {% comment %}
+  price match popup - https://codepen.io/welcomebrand/pen/QwbZbjJ
+  {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </product-page>
 
@@ -937,7 +1047,7 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
 {%- endif -%}
 
 {% schema %}
-	{
+  {
     "name": "t:sections.local-extra-words.sections.main-product.name",
     "class": "mount-css-slider mount-toggles mount-product-page",
     "tag": "section",
@@ -1787,46 +1897,46 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
         "default": "scroll",
         "info": "t:sections.main-product.settings.gallery_style.info"
       },
-			{
-				"type": "select",
-				"id": "gallery_ratio",
-				"label": "t:sections.refactor_words.product-page.gallery_resize.label",
-				"options": [
-					{
-						"value": "natural",
-						"label": "t:sections.gallery.settings.aspect_ratio.options__5.label",
-						"group": "t:sections.gallery.settings.aspect_ratio.options__5.group"
-					},
-					{
-						"value": "1.33333",
-						"label": "t:sections.gallery.settings.aspect_ratio.options__1.label",
-						"group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
-					},
-					{
-						"value": "1",
-						"label": "t:sections.gallery.settings.aspect_ratio.options__2.label",
-						"group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
-					},
-					{
-						"value": "0.83333",
-						"label": "t:sections.gallery.settings.aspect_ratio.options__3.label",
-						"group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
-					},
-					{
-						"value": "0.666667",
-						"label": "t:sections.gallery.settings.aspect_ratio.options__4.label",
-						"group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
-					}
-				],
-				"default": "natural",
+      {
+        "type": "select",
+        "id": "gallery_ratio",
+        "label": "t:sections.refactor_words.product-page.gallery_resize.label",
+        "options": [
+          {
+            "value": "natural",
+            "label": "t:sections.gallery.settings.aspect_ratio.options__5.label",
+            "group": "t:sections.gallery.settings.aspect_ratio.options__5.group"
+          },
+          {
+            "value": "1.33333",
+            "label": "t:sections.gallery.settings.aspect_ratio.options__1.label",
+            "group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
+          },
+          {
+            "value": "1",
+            "label": "t:sections.gallery.settings.aspect_ratio.options__2.label",
+            "group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
+          },
+          {
+            "value": "0.83333",
+            "label": "t:sections.gallery.settings.aspect_ratio.options__3.label",
+            "group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
+          },
+          {
+            "value": "0.666667",
+            "label": "t:sections.gallery.settings.aspect_ratio.options__4.label",
+            "group": "t:sections.gallery.settings.aspect_ratio.options__1.group"
+          }
+        ],
+        "default": "natural",
         "info": "t:sections.refactor_words.product-page.gallery_resize.info"
-			},
-			{
-				"type": "checkbox",
-				"id": "gallery_fit",
-				"label": "t:sections.refactor_words.product-page.gallery_resize.option_1",
-				"default": false
-			},
+      },
+      {
+        "type": "checkbox",
+        "id": "gallery_fit",
+        "label": "t:sections.refactor_words.product-page.gallery_resize.option_1",
+        "default": false
+      },
       {
         "type": "checkbox",
         "id": "show_border",
@@ -1839,16 +1949,16 @@ Tooltip code https://codepen.io/welcomebrand/pen/vYqYXBz/4cad0179031c24dd3ba8d3b
         "label": "t:local-march-update.labels.inherit_card_design",
         "default": false
       },
-			{
-				"type": "range",
-				"id": "gallery_padding",
-				"label": "t:sections.refactor_words.product-page.gallery_padding.label",
-				"min": 0,
-				"max": 15,
-				"step": 1,
-				"default": 0,
-				"unit": "%"
-			},
+      {
+        "type": "range",
+        "id": "gallery_padding",
+        "label": "t:sections.refactor_words.product-page.gallery_padding.label",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 0,
+        "unit": "%"
+      },
       {
         "type": "radio",
         "id": "gallery_pagination",
