@@ -887,13 +887,21 @@
       background-color: #fff;
       border: 3px solid var(--color-orange);
     border-radius: 10px;
-      padding: 15px;
+      padding: 25px;
       display: none;
       z-index: 9999;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       min-width: 200px;
       max-width: 60ch;
       text-align: center;
+    }
+
+    @media screen and (max-width: 800px) {
+      #popupBox {
+        padding: 15px;
+        min-width: 70%;
+        max-width: 90%;
+      }
     }
 
     #popupBox button {
@@ -903,7 +911,8 @@
 
   <div id="popupBox">
     <h2>Shopping around?</h2>
-    <p>We do our best to bring you the best possible prices matched with our world class service and dispatch speed so if you've seen this cheaper elsewhere, get in touch and give us a chance to match it. We'd love the opportunity to call you a customer.</p>
+    <p>We do our best to bring you the best possible prices matched with our world class service and dispatch speed so if you've seen this cheaper elsewhere, get in touch and give us a chance to match it. We'd love to count you among our tens of thousands of happy customers.</p>
+    <p><em>Ally &amp; James</em></p>
     <a class="button button--solid button--regular button--loader" href="/pages/our-price-match-promise" target="_blank">Our Price Match Promise</a>
   <button class="button button--regular button--loader" onclick="closePopup()">Close</button></div>
 
