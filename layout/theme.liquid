@@ -57,8 +57,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {%- render 'head-preloader' -%}
   {%- render 'head-variables', direction: direction -%}
 
-
+  {% comment %}
   <link rel="stylesheet" href="https://use.typekit.net/gzq3luv.css">
+  {% endcomment %}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
 
   {{ content_for_header }}

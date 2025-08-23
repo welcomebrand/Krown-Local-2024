@@ -413,13 +413,14 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Vinyl", var(--font-stack-headings);
+  font-family: var(--font-stack-headings);
   --font-weight-headings: 400;
   --font-weight-headings-bold: 700;
+  font-weight: 900;
   font-style: var(--font-style-headings);
   line-height: var(--base-headings-line);
   margin-bottom: 1rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media screen and (max-width: 1023px) {
