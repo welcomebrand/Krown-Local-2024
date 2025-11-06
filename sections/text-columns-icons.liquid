@@ -36,9 +36,9 @@
                 src="{{ block.settings.image | image_url: width: 64, height: 64, crop: 'center' }}" alt="{{ block.settings.image.alt | escape }}"
                 srcset="
                   {{ block.settings.image | image_url: width: 64, height: 64, crop: 'center' }} 64w
-                  {% if block.settings.image.width >= 128 %} ,{{ block.settings.image | image_url: width: 128, height: 128, crop: 'center' }} 128w, {% endif %} 
-                  {% if block.settings.image.width >= 192 %} ,{{ block.settings.image | image_url: width: 192, height: 192, crop: 'center' }} 192w, {% endif %} 
-                  {% if block.settings.image.width >= 256 %} ,{{ block.settings.image | image_url: width: 256, height: 256, crop: 'center' }} 256w, {% endif %} 
+                  {% if block.settings.image.width >= 128 %} ,{{ block.settings.image | image_url: width: 64, height: 64, crop: 'center' }} 128w, {% endif %} 
+                  {% if block.settings.image.width >= 192 %} ,{{ block.settings.image | image_url: width: 64, height: 64, crop: 'center' }} 192w, {% endif %} 
+                  {% if block.settings.image.width >= 256 %} ,{{ block.settings.image | image_url: width: 64, height: 64, crop: 'center' }} 256w, {% endif %} 
                 "
                 loading="lazy"
                 sizes="{%- if section.settings.layout contains 'grid-4' -%}
