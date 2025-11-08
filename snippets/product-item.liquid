@@ -19,7 +19,7 @@
     endif
 
     if settings.within_filter_enabled and product_collection
-      assign product_url = product.url | within: product_collection
+      assign product_url = product.url 
     else
       assign product_url = product.url
     endif
