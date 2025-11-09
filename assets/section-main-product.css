@@ -50,13 +50,13 @@ html[dir=ltr] .product-gallery-item model-viewer, .product-gallery-item html[dir
 @media screen and (max-width: 1023px) {
   .button--product,
 .shopify-payment-button__button {
-    font-size: calc( 					18px / 16 * var(--base-body-size) + 0px 				);
+    font-size: calc(          18px / 16 * var(--base-body-size) + 0px         );
   }
 }
 @media screen and (min-width: 1024px) {
   .button--product,
 .shopify-payment-button__button {
-    font-size: calc( 				20px / 16 * var(--base-body-size) + 0px 			);
+    font-size: calc(        20px / 16 * var(--base-body-size) + 0px       );
   }
 }
 
@@ -207,7 +207,7 @@ html[dir=ltr] .product-gallery__thumbnails .thumbnail__badge {
 
 .product__description.rte p:first-child {
   font-weight: bold;
-  font-size: 1.25rem;
+  /*font-size: 1.25rem;*/
 }
 
 .product-text > *:not(:last-child) {
@@ -1350,12 +1350,13 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
 }
 
 .container-product-lead-inventory strong {
-    color: #ff4f33;
+    color: var(--color-orange);
     font-weight: var(--font-weight-headings);
 }
 
 .container-product-lead-inventory .container-product-lead-inventory-in-stock {
     color: #567d06;
+    color: var(--color-orange);
 }
 
 .container-product-lead-inventory .container-product-lead-inventory-link {
@@ -1371,6 +1372,17 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
 .template-product .main-product .p-match-p {
   display: inline-block !important;
   vertical-align: middle;
+}
+
+
+/* Klarna snippet  */
+klarna-placement osm-container {
+    text-align: left !important;
+    padding: 5px 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
 }
 
 /* END: CEK Custom Styles  */
