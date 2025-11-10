@@ -243,8 +243,8 @@ html[dir=ltr] .product-gallery__thumbnails .thumbnail__badge {
   margin-top: 1.25rem;
 }
 .product-variant__name {
-  font-weight: var(--font-weight-body-bold);
-  display: block;
+  font-weight: 700;
+  display: inline-block;
 }
 .product-variants--select .product-variant__name {
   margin-bottom: 0.625rem;
