@@ -1,4 +1,4 @@
-{%- if settings.show_breadcrumb and template != 'index' and template != blank and template != '404' -%}
+{%- if settings.show_breadcrumb and template != 'index' and template != blank and template != '404' and template != 'product' and template != 'product.accessory' -%}
 
 	<div class="breadcrumb-main">
 	
@@ -22,7 +22,10 @@
 						{%- if template contains 'collections' -%}
 							<span class="breadcrumb__current">{{ 'general.breadcrumb.collections' | t }}</span>
 						{%- elsif collection -%}
-							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+							{% comment %}
+							<span class="breadcrumb__link xxx"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+							{% endcomment %}
+							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">All Product Collections</a></span>
 						{%- endif -%}
 					{%- endunless -%}
 
@@ -32,7 +35,7 @@
 						{%- if template contains 'collection' -%}
 							<span class="breadcrumb__current">{{ collection.title | escape }}</span>
 						{%- else -%}
-							<span class="breadcrumb__link">
+							<span class="breadcrumb__link yyyy">
 								{%- liquid
 									if collection.handle
 										capture url
