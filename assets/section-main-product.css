@@ -1374,6 +1374,14 @@ html[dir=ltr] .sticky-add-to-cart--floating.visible {
   vertical-align: middle;
 }
 
+.cek-breadcrumb {
+  font-size: 12px;
+}
+
+.breadcrumb span:not(:last-child) {
+    margin-inline-end: .6875rem;
+}
+
 
 /* Klarna snippet  */
 klarna-placement osm-container {
