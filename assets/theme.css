@@ -211,12 +211,20 @@ summary::-webkit-details-marker {
   border-radius: var(--border-radius-cards);
   overflow: hidden;
   background-color: var(--color-background-cards);
+  /*background-color: rgb(243 243 236 / 50%);*/
   position: relative;
   color: var(--color-text-cards);
   box-shadow: var(--shadow-x-cards) var(--shadow-y-cards) var(--shadow-blur-cards) var(--color-shadow-cards);
   margin-bottom: calc(var(--shadow-y-cards) + var(--shadow-blur-cards));
   margin-inline-end: calc(var(--shadow-x-cards) + var(--shadow-blur-cards));
 }
+
+
+.product-item.card {
+    background: rgb(243 243 236 / 50%);
+}
+
+
 .has-negative-shadow-x .panel, .has-negative-shadow-x .card {
   margin-inline-end: 0;
   margin-inline-start: calc((var(--shadow-x-cards) * -1) + var(--shadow-blur-cards));
@@ -2276,11 +2284,14 @@ input[type=search]::-webkit-search-results-decoration {
   object-fit: cover;
 }
 .lazy-image.lazy-image--fit img {
-  object-fit: contain !important;
+  /*object-fit: contain !important;*/
   padding: var(--image-fit-padding);
 }
 .lazy-image.lazy-image--fit.lazy-image--small img {
-  padding: 5%;
+  /*padding: 5%;*/
+    padding: 0;
+    border-radius: var(--border-radius-cards);
+    border: 2px solid var(--color-borders-cards);
 }
 .lazy-image[data-ratio] {
   height: 0;
