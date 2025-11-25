@@ -149,30 +149,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>  
 
 
-
-<script id='merchantWidgetScript' src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" defer></script>
-
-<script type="text/javascript">
-
-  merchantWidgetScript.addEventListener('load', function () {
-
-    merchantwidget.start({
-
-      position: 'LEFT_BOTTOM',
-
-      sideMargin: 20,
-
-      bottomMargin: 104,
-
-      mobileSideMargin: 20,
-
-      mobileBottomMargin: 104
-
-    });
-
-  });
-
-</script>
+{% comment %}
+Conditional load of snippets/google-store-badge.liquid to only show on product pages
+{% endcomment %}
+{% if template.name contains 'product' %}
+  {% render 'google-store-badge' %}
+{% endif %}
 
 
 </head>
