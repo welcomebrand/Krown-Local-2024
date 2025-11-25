@@ -1,0 +1,459 @@
+{% comment %}
+  VIDEO HERO – Advanced Version
+  - Smooth initial load (background colour only)
+  - Video fades in after load
+  - Video fades out after X loops → poster fades in
+  - Mobile-safe autoplay logic (iOS Chrome/Safari compatible)
+  - Full unload of video after max loops
+  - Full mobile/desktop alignment controls
+  - Overlay gradient + opacity controls
+  - Button style selector
+{% endcomment %}
+
+<section id="video-hero-{{ section.id }}" class="video-hero-section">
+
+  <style>
+    #video-hero-{{ section.id }} .cek-perf-banner {
+      position: relative;
+      width: 100%;
+      height: {{ section.settings.mobile_height }}vh;
+      max-height: {{ section.settings.mobile_height }}vh;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      background-color: {{ section.settings.banner_bg_color }};
+    }
+
+    @media (min-width:1024px) {
+      #video-hero-{{ section.id }} .cek-perf-banner {
+        height: {{ section.settings.desktop_height }}vh;
+        max-height: {{ section.settings.desktop_height }}vh;
+      }
+    }
+
+    /* Video starts hidden */
+    #video-hero-{{ section.id }} video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+
+    /* Poster starts hidden and loads only after loops */
+    #video-hero-{{ section.id }} .poster-fade {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1.5;
+
+    }
+
+    /* Overlay */
+    #video-hero-{{ section.id }} .cek-perf-banner-overlay {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 2;
+      background: {{ section.settings.overlay_gradient }};
+      opacity: {{ section.settings.overlay_opacity }};
+    }
+
+    /* Text panel */
+    #video-hero-{{ section.id }} .cek-perf-banner-content {
+      position: relative;
+      z-index: 4;
+      max-width: 800px;
+      width: 90%;
+      padding: 0 20px;
+      color: #fff;
+      text-shadow: 0 0 3px rgba(0,0,0,0.7);
+    }
+
+    @media screen and (max-width: 1024px) {
+    .text-size--large {
+        font-size: calc(14px / 16 * var(--base-body-size) + 0px);
+    }
+}
+
+    #video-hero-{{ section.id }} .cek-perf-banner-content a:not(.button) {
+      color: {{ section.settings.link_color }} !important;
+    }
+
+    /* Button styles */
+    #video-hero-{{ section.id }} .button--ghost {
+      background: transparent !important;
+      border: 2px solid #fff;
+      color: #fff !important;
+    }
+    #video-hero-{{ section.id }} .button--outline {
+      background: transparent !important;
+      border: 2px solid #d3623c;
+      color: #d3623c !important;
+    }
+
+    /* MOBILE alignment classes */
+    @media (max-width:1023px) {
+      #video-hero-{{ section.id }} .banner--mh-left  { justify-content: flex-start; }
+      #video-hero-{{ section.id }} .banner--mh-center-left,
+      #video-hero-{{ section.id }} .banner--mh-center-center { justify-content: center; }
+
+      #video-hero-{{ section.id }} .banner--mv-top    { align-items: flex-start; }
+      #video-hero-{{ section.id }} .banner--mv-middle { align-items: center; }
+      #video-hero-{{ section.id }} .banner--mv-bottom { align-items: flex-end; }
+
+      #video-hero-{{ section.id }} .banner--mh-center-center .cek-perf-banner-content {
+        text-align: center;
+      }
+      #video-hero-{{ section.id }} .banner--mh-left .cek-perf-banner-content,
+      #video-hero-{{ section.id }} .banner--mh-center-left .cek-perf-banner-content {
+        text-align: left;
+      }
+    }
+
+    /* DESKTOP alignment */
+    @media (min-width:1024px) {
+      #video-hero-{{ section.id }} .banner--dh-left  { justify-content: flex-start; }
+      #video-hero-{{ section.id }} .banner--dh-center-left,
+      #video-hero-{{ section.id }} .banner--dh-center-center { justify-content: center; }
+
+      #video-hero-{{ section.id }} .banner--dv-top    { align-items: flex-start; }
+      #video-hero-{{ section.id }} .banner--dv-middle { align-items: center; }
+      #video-hero-{{ section.id }} .banner--dv-bottom { align-items: flex-end; }
+
+      #video-hero-{{ section.id }} .banner--dh-center-center .cek-perf-banner-content {
+        text-align: center;
+      }
+      #video-hero-{{ section.id }} .banner--dh-left .cek-perf-banner-content,
+      #video-hero-{{ section.id }} .banner--dh-center-left .cek-perf-banner-content {
+        text-align: left;
+      }
+    }
+  </style>
+
+  <div 
+    class="cek-perf-banner
+      banner--mh-{{ section.settings.mobile_horizontal_align }}
+      banner--mv-{{ section.settings.mobile_vertical_align }}
+      banner--dh-{{ section.settings.desktop_horizontal_align }}
+      banner--dv-{{ section.settings.desktop_vertical_align }}"
+  >
+
+    {% if section.settings.poster_image %}
+      <img 
+        id="poster-{{ section.id }}"
+        data-src="{{ section.settings.poster_image | img_url: '2000x' }}"
+        class="poster-fade"
+      >
+    {% endif %}
+
+    {% if section.settings.video_desktop %}
+      <video 
+        id="video-{{ section.id }}"
+        muted 
+        playsinline 
+        preload="auto"
+      >
+        <source src="{{ section.settings.video_desktop }}" type="video/mp4">
+      </video>
+    {% endif %}
+
+    <div class="cek-perf-banner-overlay"></div>
+
+    <div class="cek-perf-banner-content">
+      <div class="rich-text__text">
+        <div class="card__text spacing--large remove-empty-space">
+          <h1 class="h1 rte rich-text__title">{{ section.settings.heading }}</h1>
+
+          <div class="rte text-size--large">{{ section.settings.body_text }}</div>
+
+          <div class="increased-spacing">
+            <a href="{{ section.settings.button_url }}" class="button button--large button--{{ section.settings.button_style }}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+
+          <div class="rte text-size--regular">
+            {{ section.settings.review_text }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const vid = document.getElementById("video-{{ section.id }}");
+  const poster = document.getElementById("poster-{{ section.id }}");
+  if (!vid) return;
+
+  let loops = 0;
+  const maxLoops = {{ section.settings.max_loops }};
+  let videoStarted = false;
+  let hasFadedPoster = false;
+
+  let fallbackTimeout;
+  let retryTimeout;
+
+  function fadeInVideo() {
+    if (videoStarted) return;
+    videoStarted = true;
+
+    clearTimeout(fallbackTimeout);
+    clearTimeout(retryTimeout);
+
+    // Fade in video
+    vid.style.opacity = "1";
+
+    // Begin playback (mobile compatible)
+    function tryPlay() {
+      const promise = vid.play();
+      if (promise) {
+        promise.catch(() => setTimeout(tryPlay, 150));
+      }
+    }
+    tryPlay();
+  }
+
+  // Mobile-safe event
+  vid.addEventListener("loadeddata", fadeInVideo);
+  vid.addEventListener("canplaythrough", fadeInVideo);
+
+  // Fallback #1: Wait longer before assuming failure
+  fallbackTimeout = setTimeout(function() {
+    if (!videoStarted) {
+      // Try forcing play once more (in case video just needed a push)
+      function tryForcePlay() {
+        const p = vid.play();
+        if (p) {
+          p.then(() => fadeInVideo()).catch(() => {});
+        }
+      }
+      tryForcePlay();
+
+      // Fallback #2: if still not started after retry, show poster
+      retryTimeout = setTimeout(function() {
+        if (!videoStarted) {
+          if (poster && !hasFadedPoster) {
+            const src = poster.dataset.src;
+            if (src) poster.src = src;
+            poster.style.opacity = "1";
+            hasFadedPoster = true;
+          }
+          vid.style.display = "none";
+        }
+      }, 1200);
+
+    }
+  }, 2000);
+
+  // Loop control
+  vid.addEventListener("ended", function() {
+    if (!videoStarted) return;
+
+    loops++;
+    if (loops < maxLoops) {
+      vid.currentTime = 0;
+      vid.play();
+      return;
+    }
+
+    // Fade away video and fade in poster
+    vid.style.opacity = "0";
+
+    if (poster && !hasFadedPoster) {
+      const src = poster.dataset.src;
+      if (src && !poster.src) poster.src = src;
+      poster.style.opacity = "1";
+      hasFadedPoster = true;
+    }
+
+    setTimeout(function() {
+      vid.pause();
+      vid.removeAttribute("src");
+      while (vid.firstChild) vid.removeChild(vid.firstChild);
+      vid.load();
+      vid.style.display = "none";
+    }, 600);
+  });
+
+});
+</script>
+
+
+</section>
+
+{% schema %}
+{
+  "name": "Video Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_desktop",
+      "label": "Video MP4 URL",
+      "default": "https://cdn.shopify.com/videos/c/o/v/c864afcc32f2497a9786902800ff3197.mp4"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Poster fallback"
+    },
+    {
+      "type": "color",
+      "id": "banner_bg_color",
+      "label": "Banner background colour",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "max_loops",
+      "label": "Maximum video loops",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "overlay_gradient",
+      "label": "Overlay Gradient (CSS)",
+      "default": "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "label": "Mobile height (vh)",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop height (vh)",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 50
+    },
+
+    {
+      "type": "select",
+      "id": "mobile_horizontal_align",
+      "label": "Mobile horizontal position",
+      "options": [
+        { "label": "Left (panel left, text left)", "value": "left" },
+        { "label": "Center (panel center, text left)", "value": "center-left" },
+        { "label": "Center (panel & text centered)", "value": "center-center" }
+      ],
+      "default": "left"
+    },
+
+    {
+      "type": "select",
+      "id": "mobile_vertical_align",
+      "label": "Mobile vertical position",
+      "options": [
+        { "label": "Top", "value": "top" },
+        { "label": "Middle", "value": "middle" },
+        { "label": "Bottom", "value": "bottom" }
+      ],
+      "default": "middle"
+    },
+
+    {
+      "type": "select",
+      "id": "desktop_horizontal_align",
+      "label": "Desktop horizontal position",
+      "options": [
+        { "label": "Left (panel left, text left)", "value": "left" },
+        { "label": "Center (panel center, text left)", "value": "center-left" },
+        { "label": "Center (panel & text centered)", "value": "center-center" }
+      ],
+      "default": "left"
+    },
+
+    {
+      "type": "select",
+      "id": "desktop_vertical_align",
+      "label": "Desktop vertical position",
+      "options": [
+        { "label": "Top", "value": "top" },
+        { "label": "Middle", "value": "middle" },
+        { "label": "Bottom", "value": "bottom" }
+      ],
+      "default": "middle"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Handmade Japanese Knives & Accessories"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>We're proud to be one of the UK's best rated Japanese knife shops with our thoughtfully curated range of products from Japan's most skilled artisans and workshops.</p><p>Our goal is to help you find the <a href='https://cuttingedgeknives.co.uk/collections/all-knives'>perfect knife</a> and <a href='https://cuttingedgeknives.co.uk/collections/accessories'>kitchen accessories</a> to enhance your cooking and kitchen.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop our Best Sellers"
+    },
+    {
+      "type": "text",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "https://cuttingedgeknives.co.uk/collections/all-knives?filter.v.availability=1&sort_by=best-selling"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "label": "Solid", "value": "solid" },
+        { "label": "Outline", "value": "outline" },
+        { "label": "Ghost", "value": "ghost" }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Body text link colour",
+      "default": "#d3623c"
+      },
+    {
+      "type": "richtext",
+      "id": "review_text",
+      "label": "Review text",
+      "default": "<p>🏆 <a href='https://www.reviews.co.uk/company-reviews/store/cuttingedgeknives.co.uk' target='_blank'>Rated 5 Stars in 2000+ verified reviews</a></p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Hero",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
