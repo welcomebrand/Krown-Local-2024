@@ -1,0 +1,247 @@
+<div class="container--fullwidth container--vertical-space">
+  <div class="rich-text-video__inner container--large gutter-top--large gutter-bottom--large">
+
+    <div class="rich-text-video__text">
+      {% if section.settings.heading %}
+      <h2 class="h2 rte rich-text__title">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      <div class="rte text-size--regular">
+        {{ section.settings.text }}
+      </div>
+
+      {%- if section.settings.signature_image != blank -%}
+      <div class="signature-image spacing--large">
+        <img src="{{ section.settings.signature_image | img_url: '300x' }}" alt="Signature" loading="lazy">
+      </div>
+      {%- endif -%}
+
+      {%- assign links = "" -%}
+      {%- for i in (1..4) -%}
+        {%- assign label_key = "link_label_" | append: i -%}
+        {%- assign url_key = "link_url_" | append: i -%}
+
+        {%- assign label = section.settings[label_key] -%}
+        {%- assign url = section.settings[url_key] -%}
+
+        {%- if label != blank and url != blank -%}
+          {%- if links != "" -%}
+            {%- assign links = links | append: '&nbsp;&nbsp;|&nbsp;&nbsp;' -%}
+          {%- endif -%}
+          {%- assign links = links
+            | append: '<a href="'
+            | append: url
+            | append: '" title="'
+            | append: label
+            | append: '">'
+            | append: label
+            | append: '</a>'
+          -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if links != "" -%}
+      <p class="spacing--small">{{ links | raw }}</p>
+      {%- endif -%}
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <div class="rich-text-video__button spacing--large">
+        <a class="button button--primary" href="{{ section.settings.button_link }}">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="rich-text-video__video">
+      {% if section.settings.video_id != blank %}
+      <div class="vimeo-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/{{ section.settings.video_id }}?badge=0&autopause=0&player_id={{ section.id }}&app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          loading="lazy"></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+{% style %}
+
+/* SECTION COLORS */
+#shopify-section-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  color: {{ section.settings.text_color }};
+}
+#shopify-section-{{ section.id }} a {
+  color: {{ section.settings.text_color }};
+  font-weight: bold;
+  text-decoration: underline;
+}
+#shopify-section-{{ section.id }} a:hover {
+  text-decoration: none;
+}
+
+/* BASE LAYOUT */
+.rich-text-video__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* OPTIONAL SIGNATURE IMAGE */
+.signature-image img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+}
+
+/* VIDEO WRAPPER */
+.vimeo-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 3px solid #fff;
+}
+
+.vimeo-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* MOBILE ORDER */
+{% if section.settings.layout_mobile == "video_first" %}
+  .rich-text-video__video { order: 1; }
+  .rich-text-video__text { order: 2; }
+{% else %}
+  .rich-text-video__text { order: 1; }
+  .rich-text-video__video { order: 2; }
+{% endif %}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 1024px) {
+
+  .rich-text-video__inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  {% if section.settings.layout_desktop == "video_left" %}
+    .rich-text-video__video { order: 1; }
+    .rich-text-video__text {
+      order: 2;
+      padding-left: var(--gutter-container);
+    }
+  {% else %}
+    .rich-text-video__text {
+      order: 1;
+      padding-right: var(--gutter-container);
+    }
+    .rich-text-video__video { order: 2; }
+  {% endif %}
+
+  .rich-text-video__text,
+  .rich-text-video__video {
+    flex: 1 1 50%;
+  }
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Video Rich Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Helping you find the perfect knives & accessories"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Your text goes here...</p>"
+    },
+    {
+      "type": "text",
+      "id": "video_id",
+      "label": "Vimeo Video ID",
+      "default": "123456789"
+    },
+    {
+      "type": "select",
+      "id": "layout_desktop",
+      "label": "Desktop layout",
+      "default": "video_right",
+      "options": [
+        { "value": "video_right", "label": "Video right (default)" },
+        { "value": "video_left", "label": "Video left" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "layout_mobile",
+      "label": "Mobile layout",
+      "default": "text_first",
+      "options": [
+        { "value": "text_first", "label": "Text above video (default)" },
+        { "value": "video_first", "label": "Video above text" }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "signature_image",
+      "label": "Signature Image"
+    },
+    { "type": "text", "id": "link_label_1", "label": "Link 1 label", "default": "About Us" },
+    { "type": "text", "id": "link_url_1", "label": "Link 1 URL", "default": "/pages/about-us" },
+    { "type": "text", "id": "link_label_2", "label": "Link 2 label", "default": "Money Back Guarantee" },
+    { "type": "text", "id": "link_url_2", "label": "Link 2 URL", "default": "/pages/money-back-promise" },
+    { "type": "text", "id": "link_label_3", "label": "Link 3 label", "default": "Worldwide Shipping from UK" },
+    { "type": "text", "id": "link_url_3", "label": "Link 3 URL", "default": "/pages/postage-and-returns" },
+    { "type": "text", "id": "link_label_4", "label": "Link 4 label", "default": "Contact" },
+    { "type": "text", "id": "link_url_4", "label": "Link 4 URL", "default": "/pages/contact-us" },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn more"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button link (URL)",
+      "default": "/pages/about-us"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#2276ba"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Rich Text"
+    }
+  ]
+}
+{% endschema %}
